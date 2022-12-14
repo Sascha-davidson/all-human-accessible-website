@@ -671,7 +671,7 @@ nav button{
 
   .header-style-image {
     display: block;
-    height: calc(95vh - 60px - 11rem);
+    height: calc(100vh - 60px - 11rem);
     padding-top: 3rem;
     max-height: calc(1080px - 60px - 11rem);
     width: auto;
