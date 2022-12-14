@@ -98,7 +98,7 @@ body {
 
 h1 {
   /* font-size: 2rem; */
-  font-size: clamp(2rem, 6vw, 5rem);
+  font-size: clamp(2rem, 6vw, 4rem);
 
   font-weight: 400;
   display: inline-block;
@@ -107,7 +107,7 @@ h1 {
 
 strong {
   /* font-size: 2.5rem; */
-  font-size: clamp(2.5rem, 8vw, 7rem);
+  font-size: clamp(2.5rem, 8vw, 6rem);
   font-weight: 700;
 }
 h2 {
@@ -215,7 +215,7 @@ header .site-header {
   margin-top: 0rem;
 }
 
-@media screen and (min-width: 707px) {
+@media screen and (min-width: 785px) {
   
 
   header .site-header {
@@ -232,19 +232,18 @@ header .site-header {
   }
 }
 
-@media screen and (min-width: 1100px) { 
+@media screen and (min-width: 1165px) { 
 
   header .site-header {
     display: flex;
     justify-content: space-between;
     padding: 1rem 5%;
     flex-wrap: nowrap;
-    height: 60px;
+    height: 70px;
     position: relative;
   }
 
   .site-identity img {
-    margin-top: 1.5rem;
     width: 20rem;
   }
 
@@ -258,7 +257,7 @@ header .site-header {
   display: none;
 }
 
-@media screen and (max-width: 707px) {
+@media screen and (max-width: 785px) {
   .burger {
     display: flex;
     align-items: center;
@@ -292,7 +291,6 @@ header .site-header {
   .mobile-nav ul li a:hover,
   .mobile-nav ul li a:focus {
     color: var(--c-primary);
-    transform: scale(1.2);
     font-weight: 500;
   }
 
@@ -338,10 +336,11 @@ header nav {
   max-height: calc(1080px - 5rem);
   width: 80vw;
   padding: 4rem 2rem;
-  z-index: 2;
+  z-index: 5;
   transform: translateX(100%);
   transition: transform 0.3s ease-in;
   background: rgba(0, 0, 0, 0.8);
+  max-width: 400px;
 }
 
 header .main-nav {
@@ -358,7 +357,6 @@ header nav .main-nav li {
 }
 
 header nav .main-nav li a {
-  color: var(--c-color-dark);
   text-decoration: none;
   font-size: 1.125rem;
   display: inline-block;
@@ -369,7 +367,18 @@ header nav .main-nav li a {
   color: var(--c-color-light-solid);
 }
 
-@media screen and (min-width: 707px) {
+nav button{
+  font-size: 1.125rem;
+  transition: all 0.3s ease-in-out;
+  padding: 0 2rem;
+  border-radius: 50px;
+  border: none;
+  height: calc(70px - 2rem);
+  color: var(--c-color-light-solid);
+  background-color: var(--c-primary);
+}
+
+@media screen and (min-width: 785px) {
   header nav {
     display: flex;
     flex-direction: row;
@@ -382,15 +391,18 @@ header nav .main-nav li a {
     background: none;
     position: relative;
     height: auto;
+
+    max-width: none;
+
   }
 
   header .main-nav {
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    
-    gap: var(--smal-gap);
+    justify-content: space-between;
+    align-items: center;
+    gap: 4px;
     margin: 0;
     width: 100%;
   }
@@ -415,7 +427,6 @@ header nav .main-nav li a {
   header nav .main-nav li a:hover,
   header nav .main-nav li a:focus {
     color: var(--c-primary);
-    transform: scale(1.2);
     font-weight: 500;
   }
 
@@ -428,15 +439,17 @@ header nav .main-nav li a {
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1165px) {
   header .main-nav {
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    gap: var(--smal-gap);
     margin: 0;
+
   }
+
+  
 }
 
 /* hoofd img */
@@ -456,6 +469,7 @@ header nav .main-nav li a {
   color: var(--c-color-light-solid);
   overflow: hidden;
   margin-top: -40px;
+  min-height: 600px;
 }
 
 .header-style-afbeeldingen {
@@ -479,7 +493,6 @@ header nav .main-nav li a {
   max-height: 1080px;
   display: flex;
   left: 0;
-  z-index: 5;
 }
 
 .vervoerregio-path-box-devided {
@@ -487,6 +500,7 @@ header nav .main-nav li a {
   flex-direction: row;
   width: inherit;
   height: 40px;
+  z-index: 7;
 }
 
 .responsive-width {
@@ -521,7 +535,7 @@ header nav .main-nav li a {
   max-width: 800px;
   height: calc(100svh - 70px - 11rem);
   max-height: calc(1080px - 60px - 11rem);
-  min-height: 250px;
+  min-height: 400px;
 
   display: flex;
   flex-direction: column;
@@ -536,6 +550,7 @@ header nav .main-nav li a {
   width: auto;
   height: inherit;
   max-height: inherit;
+  min-height: 400px;
 }
 
 .bottom-bar {
@@ -567,7 +582,7 @@ header nav .main-nav li a {
   );
 }
 
-@media screen and (min-width: 707px) {
+@media screen and (min-width: 785px) {
   .vervoerregio-path-box {
     width: 100%;
     height: auto;
@@ -608,7 +623,7 @@ header nav .main-nav li a {
   }
 
   .bottom-bar-box {
-    height: 8rem;
+    height: 6rem;
   }
 
   .vervoerregio-path-box {
@@ -624,7 +639,7 @@ header nav .main-nav li a {
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1165px) {
   .header-style,
   .header-style-afbeeldingen {
     margin-top: -2.5rem;
@@ -633,7 +648,7 @@ header nav .main-nav li a {
   }
 
   .header-style {
-    height: 95vh;
+    height: calc(100vh - 70px);
   }
 
   .header-style .header-style-title {
@@ -669,12 +684,15 @@ header nav .main-nav li a {
   display: flex;
   align-items: flex-end;
   height: calc(100svh - 60px);
-  z-index: 8;
+  z-index: 4;
   position: absolute;
   width: 80vw;
   right: 0;
   transform: translateX(100%);
   transition: transform 0.3s ease-in;
+
+  max-width: 400px;
+
 }
 
 .open-menu {
@@ -696,8 +714,10 @@ header nav .main-nav li a {
   cursor: pointer;
   box-shadow: var(--c-box-shadow-dark);
   transition: all 0.3s ease-out;
-  z-index: 10;
+  z-index: 4;
   text-decoration: none;
+
+  
 }
 
 .socialmedias-button .button .icon {
@@ -731,7 +751,7 @@ header nav .main-nav li a {
   background: #333;
 }
 
-@media screen and (min-width: 707px) {
+@media screen and (min-width: 785px) {
   .socialmedias-button {
     display: flex;
     z-index: 10;
@@ -739,6 +759,8 @@ header nav .main-nav li a {
     right: 5%;
     height: auto;
     transform: none;
+    max-width: none;
+
   }
 
   .button {
@@ -747,7 +769,6 @@ header nav .main-nav li a {
     height: 40px;
     width: 40px;
     overflow: hidden;
-    background: var(--c-background-light-solid);
     border-radius: var(--b-radius-rounded);
     cursor: pointer;
     box-shadow: var(--c-box-shadow-dark);
@@ -1000,7 +1021,7 @@ main {
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1165px) {
   .checklist-box {
     flex-wrap: nowrap;
   }
@@ -1343,7 +1364,7 @@ textarea {
   margin: 0;
 }
 
-@media screen and (min-width: 1170px) {
+@media screen and (min-width: 1165px) {
   .sub-footer {
     display: flex;
   }
@@ -1389,7 +1410,7 @@ textarea {
   }
 }
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1165px) {
   .regio-logo {
     display: block;
     width: 50%;
