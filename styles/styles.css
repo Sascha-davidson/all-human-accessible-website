@@ -334,7 +334,7 @@ header nav {
   position: absolute;
   top: 60px;
   right: 0;
-  height: calc(100vh - 60px - 5rem);
+  height: calc(100svh - 60px - 5rem);
   max-height: calc(1080px - 5rem);
   width: 80vw;
   padding: 4rem 2rem;
@@ -443,7 +443,7 @@ header nav .main-nav li a {
 
 .header-style {
   width: 100%;
-  height: calc(100vh - 60px);
+  height: calc(100svh - 60px);
   position: relative;
   z-index: 1;
   max-height: 1080px;
@@ -519,7 +519,7 @@ header nav .main-nav li a {
 .header-style .header-style-title {
   width: 100%;
   max-width: 800px;
-  height: calc(100vh - 70px - 11rem);
+  height: calc(100svh - 70px - 11rem);
   max-height: calc(1080px - 60px - 11rem);
 
   display: flex;
@@ -598,11 +598,11 @@ header nav .main-nav li a {
   }
 
   .header-style {
-    height: calc(100vh - 120px);
+    height: calc(100svh - 120px);
   }
 
   .header-style .header-style-title {
-    height: calc(100vh - 138px - 60px - 10rem);
+    height: calc(100svh - 138px - 60px - 10rem);
   }
 
   .bottom-bar-box {
@@ -666,7 +666,7 @@ header nav .main-nav li a {
 .socialmedias-button {
   display: flex;
   align-items: flex-end;
-  height: calc(100vh - 60px);
+  height: calc(100svh - 60px);
   z-index: 8;
   position: absolute;
   width: 80vw;
