@@ -521,6 +521,7 @@ header nav .main-nav li a {
   max-width: 800px;
   height: calc(100svh - 70px - 11rem);
   max-height: calc(1080px - 60px - 11rem);
+  min-height: 250px;
 
   display: flex;
   flex-direction: column;
