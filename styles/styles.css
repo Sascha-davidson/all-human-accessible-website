@@ -239,7 +239,7 @@ header .site-header {
     justify-content: space-between;
     padding: 1rem 5%;
     flex-wrap: nowrap;
-    height: auto;
+    height: 60px;
     position: relative;
   }
 
