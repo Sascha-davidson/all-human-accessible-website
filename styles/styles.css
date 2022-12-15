@@ -200,7 +200,7 @@ header {
 header .site-header {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 5%;
+  padding: .5rem 5%;
   flex-wrap: wrap;
   height: 60px;
   position: relative;
@@ -261,7 +261,7 @@ header .site-header {
   .burger {
     display: flex;
     align-items: center;
-    gap: var(--smal-gap);
+    gap: 0;
     z-index: 2;
   }
 
@@ -272,6 +272,26 @@ header .site-header {
     margin: 5px;
     border-radius: var(--b-radius-rounded);
     transition: all 0.3s ease;
+  }
+
+  .burger section{
+    padding: .5rem .25rem;
+    cursor: pointer;
+
+  }
+
+  .burger-toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .burger-toggle .line2 {
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+
+  }
+  
+  .burger-toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
   }
 
   .mobile-nav ul li {
@@ -469,7 +489,7 @@ nav button{
   color: var(--c-color-light-solid);
   overflow: hidden;
   margin-top: -40px;
-  min-height: 600px;
+  min-height: 400px;
 }
 
 .header-style-afbeeldingen {
@@ -522,7 +542,7 @@ nav button{
 
 .header-style-content {
   padding: 0rem 10%;
-  padding-top: 60px;
+  padding-top: 40px;
   width: 100%;
 }
 
@@ -535,7 +555,7 @@ nav button{
   max-width: 800px;
   height: calc(100svh - 70px - 11rem);
   max-height: calc(1080px - 60px - 11rem);
-  min-height: 400px;
+  min-height: 200px;
 
   display: flex;
   flex-direction: column;
@@ -616,10 +636,12 @@ nav button{
 
   .header-style {
     height: calc(100svh - 120px);
+    min-height: 550px;
   }
 
   .header-style .header-style-title {
     height: calc(100svh - 138px - 60px - 10rem);
+    min-height: 400px;
   }
 
   .bottom-bar-box {
@@ -636,6 +658,10 @@ nav button{
 
   .logo-width {
     width: 7rem;
+  }
+
+  .header-style-content {
+    padding-top: 40px;
   }
 }
 
@@ -663,7 +689,8 @@ nav button{
     width: 12rem;
   }
 
-  .header-style-content {
+  .header-style-content{
+
     display: flex;
     justify-content: space-between;
     gap: var(--large-gap);
