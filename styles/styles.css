@@ -499,18 +499,25 @@ nav button {
 }
 
 .header-style-content {
-  padding: 0rem 5%;
+  padding: 0rem 10%;
   padding-top: 40px;
   width: 100%;
   height: calc(100% - 9rem);
 }
 
 .header-style-content-2 {
-  padding: 0rem 5%;
+  padding: 0rem 10%;
   padding-top: 60px;
   padding-bottom: 9rem;
   width: 100%;
-  
+}
+
+.header-style-content-3 {
+  padding: 0rem 10%;
+  padding-top: 40px;
+  margin-top: -40px;
+  width: 100%;
+  height: calc(100% - 9rem);
 }
 
 .header-style-content p {
@@ -583,11 +590,17 @@ nav button {
 
 @media screen and (min-width: 785px) {
 
-  .header-style-content,
-  .header-style-content-2{
+  .header-style-content{
     padding: 0rem 10%;
     padding-top: 60px;
     padding-bottom: 0;
+
+  }
+
+  .header-style-content-2{
+    padding: 0rem 10%;
+    padding-top: 60px;
+    padding-bottom: 9rem;
 
   }
 
@@ -643,6 +656,10 @@ nav button {
   }
 
   .header-style-content {
+    padding-top: 60px;
+  }
+
+  .header-style-content-3 {
     padding-top: 60px;
   }
 }
@@ -869,7 +886,7 @@ nav button {
 /* main */
 
 main {
-  margin: 0rem 5%;
+  margin: 0rem 10%;
   margin-top: 3rem;
 }
 
