@@ -21,41 +21,42 @@
 <body>
 
   <header>
+    <div class="site-header">
+      <div class="site-identity">
+        <a href="index.html">
+          <img src="assets/vervoerregio-logo.svg" alt="Vervoerregio Amsterdam">
+        </a>
+      </div>
 
-    <div class="site-identity">
-      <a href="index.html">
-        <img src="assets/vervoerregio-logo.svg" alt="Vervoerregio Amsterdam">
-      </a>
+      <input type="checkbox" id="mode">
+
+      <section id="burger" class="burger">
+        <section>
+          <p>menu</p>
+        </section>
+        <section>
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </section>
+      </section>
+
+
+      <nav>
+        <ul class="main-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">wat gebeurt er</a></li>
+          <li><a href="#">Wat doen wij?</a></li>
+          <li><a href="#">Wie zijn wij?</a></li>
+          <li><a href="#">Wcag Richtlijnen</a></li>
+          <button id="filter">Filter</button>
+
+        </ul>
+
+      </nav>
+
     </div>
 
-    <section class="burger">
-      <section>
-        <p>Menu</p>
-      </section>
-      <section>
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </section>
-    </section>
-
-
-    <nav>
-      <ul class="main-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">wat gebeurt er</a></li>
-        <li><a href="#">Wat doen wij?</a></li>
-        <li><a href="#">Wie zijn wij?</a></li>
-        <li><a href="#">Wcag Richtlijnen</a>
-        </li>
-      </ul>
-
-    </nav>
-
-
-  </header>
-
-  <div class="header-style-afbeeldingen">
     <section class="vervoerregio-path-box">
       <div class="vervoerregio-path-box-devided">
         <section class="responsive-width"></section>
@@ -64,18 +65,15 @@
         <svg class="vervoerregio-path-curve" id="Laag_1" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 990.38 392.17">
           <defs>
-            <style>
-              .cls-1 {
-                fill: #fff;
-              }
-            </style>
+
           </defs>
           <path class="cls-1" d="M0,392.17V0H990.38C495.19,0,495.19,392.17,0,392.17Z" />
         </svg>
       </div>
 
 
-      <div class="socialmedias-button">
+
+      <div id="socialmedia" class="socialmedias-button">
 
         <a href="https://www.facebook.com/vervoerregio" class="button">
           <div class="icon">
@@ -114,6 +112,11 @@
         </a>
       </div>
     </section>
+
+  </header>
+
+  <div class="header-style-afbeeldingen">
+    
     <section class="header-style-content">
       <section class="header-style-title">
         <h1>Afbeeldingen</h1>
@@ -526,7 +529,12 @@
 
   <footer>
     <section class="vervoerregio-path-box-footer">
-      <div class="vervoerregio-path-footer"></div>
+      <div class="vervoerregio-path-footer">
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg id="Laag_1" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 2">
+          <path d="M4,0H0c2,0,2,2,4,2" />
+        </svg>
+      </div>
       <div class="width-footer"></div>
       <div class="responsive-width-footer"></div>
     </section>

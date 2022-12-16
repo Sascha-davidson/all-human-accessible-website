@@ -136,8 +136,6 @@ p {
   color: var(--c-color-dark);
 }
 
-
-
 /* Header */
 
 header {
@@ -149,7 +147,7 @@ header .site-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: .5rem 5%;
+  padding: 0.5rem 5%;
   flex-wrap: wrap;
   height: 60px;
   position: relative;
@@ -165,8 +163,6 @@ header .site-header {
 }
 
 @media screen and (min-width: 785px) {
-  
-
   header .site-header {
     display: flex;
     justify-content: space-between;
@@ -182,8 +178,7 @@ header .site-header {
   }
 }
 
-@media screen and (min-width: 1190px) { 
-
+@media screen and (min-width: 1190px) {
   header .site-header {
     display: flex;
     align-items: flex-start;
@@ -198,8 +193,6 @@ header .site-header {
   .site-identity img {
     width: 20rem;
   }
-
-  
 }
 
 /* burger*/
@@ -226,22 +219,20 @@ header .site-header {
     transition: all 0.3s ease;
   }
 
-  .burger section{
-    padding: .5rem .25rem;
+  .burger section {
+    padding: 0.5rem 0.25rem;
     cursor: pointer;
-
   }
 
   .burger-toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
   }
-  
+
   .burger-toggle .line2 {
     opacity: 0;
     transition: all 0.2s ease-in-out;
-
   }
-  
+
   .burger-toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
   }
@@ -322,8 +313,6 @@ header .main-nav {
   justify-content: space-between;
 }
 
-
-
 header nav .main-nav li {
   display: flex;
   flex-direction: row;
@@ -341,11 +330,11 @@ header nav .main-nav li a {
   color: var(--c-color-light-solid);
 }
 
-nav button{
+nav button {
   font-size: 1.125rem;
   transition: all 0.3s ease-in-out;
   padding: 0 2rem;
-  border-radius: 50px;
+  border-radius: var(--b-radius-medium);
   border: none;
   height: calc(70px - 2rem);
   color: var(--c-color-light-solid);
@@ -368,7 +357,6 @@ nav button{
     height: auto;
 
     max-width: none;
-
   }
 
   header .main-nav {
@@ -409,11 +397,7 @@ nav button{
     display: none;
   }
 
-  header nav .nav-button {
-    display: none;
-  }
-
-  nav button{
+  nav button {
     margin: auto 0;
   }
 }
@@ -425,10 +409,7 @@ nav button{
     flex-direction: row;
     justify-content: flex-end;
     margin: 0;
-
   }
-
-  
 }
 
 /* hoofd img */
@@ -449,6 +430,24 @@ nav button{
   overflow: hidden;
   margin-top: -40px;
   min-height: 450px;
+}
+
+
+.header-style-2 {
+  width: 100%;
+
+  position: relative;
+  z-index: 1;
+  max-height: 1080px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
+    url("../assets/vervoerregio-amsterdam-header.jpg");
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: var(--c-color-light-solid);
+  overflow: hidden;
+  margin-top: -40px;
 }
 
 .header-style-afbeeldingen {
@@ -496,14 +495,22 @@ nav button{
 
 .vervoerregio-path-box svg {
   fill: var(--c-background-light);
-  height: 40px;
+  height: 100%;
 }
 
 .header-style-content {
-  padding: 0rem 10%;
+  padding: 0rem 5%;
   padding-top: 40px;
   width: 100%;
   height: calc(100% - 9rem);
+}
+
+.header-style-content-2 {
+  padding: 0rem 5%;
+  padding-top: 60px;
+  padding-bottom: 9rem;
+  width: 100%;
+  
 }
 
 .header-style-content p {
@@ -561,7 +568,29 @@ nav button{
   );
 }
 
+.header-style button {
+  font-size: 1.125rem;
+  transition: all 0.3s ease-in-out;
+  padding: 0 2rem;
+  border-radius: var(--b-radius-medium);
+  border: none;
+  height: calc(70px - 2rem);
+  color: var(--c-color-light-solid);
+  background-color: var(--c-primary);
+  margin: 2rem 0;
+  width: 13rem;
+}
+
 @media screen and (min-width: 785px) {
+
+  .header-style-content,
+  .header-style-content-2{
+    padding: 0rem 10%;
+    padding-top: 60px;
+    padding-bottom: 0;
+
+  }
+
   .vervoerregio-path-box {
     width: 100%;
     height: auto;
@@ -570,7 +599,7 @@ nav button{
     align-items: flex-end;
     left: 0;
     z-index: 5;
-  } 
+  }
 
   .vervoerregio-path-box-devided {
     position: absolute;
@@ -587,10 +616,9 @@ nav button{
   }
 
   .header-style,
+  .header-style-2,
   .header-style-afbeeldingen {
-    margin-top: -1rem;
     margin-top: -60px;
-
   }
 
   .header-style {
@@ -624,7 +652,6 @@ nav button{
   .header-style-afbeeldingen {
     margin-top: -2.5rem;
     margin-top: -60px;
-
   }
 
   .header-style {
@@ -635,8 +662,7 @@ nav button{
     width: 18rem;
   }
 
-  .header-style-content{
-
+  .header-style-content {
     display: flex;
     justify-content: space-between;
     gap: var(--large-gap);
@@ -664,7 +690,6 @@ nav button{
   transition: transform 0.3s ease-in;
   max-height: 1080px;
   max-width: 400px;
-
 }
 
 .open-menu {
@@ -688,8 +713,6 @@ nav button{
   transition: all 0.3s ease-out;
   z-index: 4;
   text-decoration: none;
-
-  
 }
 
 .socialmedias-button .button .icon {
@@ -732,7 +755,6 @@ nav button{
     height: auto;
     transform: none;
     max-width: none;
-
   }
 
   .button {
@@ -847,7 +869,7 @@ nav button{
 /* main */
 
 main {
-  margin: 0rem 10%;
+  margin: 0rem 5%;
   margin-top: 3rem;
 }
 
@@ -893,6 +915,14 @@ main {
   color: var(--c-color-light);
 }
 
+.informatie-box h3 {
+  color: var(--c-color-dark);
+}
+
+.informatie-box:hover h3 {
+  color: var(--c-color-light-solid);
+}
+
 .informatie-box img {
   width: 100%;
 }
@@ -927,7 +957,15 @@ main {
     var(--c-secondary) 0%,
     var(--c-primary) 100%
   );
-  color: var(--c-color-light);
+  color: var(--c-color-light-solid);
+}
+
+.checklist-box p {
+  color: var(--c-color-dark);
+}
+
+.checklist-box:hover p {
+  color: var(--c-color-light-solid);
 }
 
 .checklist-box img {
@@ -971,7 +1009,15 @@ main {
   color: var(--c-primary);
 }
 
+@media screen and (min-width: 785px) {
+  main{
+    margin: 0rem 10%;
+
+  }
+}
+
 @media screen and (min-width: 450px) {
+
   .informatie {
     flex-wrap: nowrap;
     overflow: auto;
@@ -999,7 +1045,7 @@ main {
   }
 }
 
-/* details summery */
+/* details summary */
 
 .details-box-shadow {
   display: flex;
@@ -1185,6 +1231,10 @@ footer {
   color: var(--c-color-light-solid);
 }
 
+footer h4 {
+  padding-bottom: 1rem;
+}
+
 .footer-content {
   margin: 0rem 10%;
   margin-top: 3rem;
@@ -1207,48 +1257,50 @@ footer {
   width: 100%;
 }
 
+.responsive-width-footer {
+  width: 10%;
+  height: 100%;
+  background-color: var(--c-background-light);
+}
+
+.width-footer {
+  width: 40%;
+  height: 100%;
+  background-color: var(--c-background-light);
+}
+
 .vervoerregio-path-box-footer {
   width: 100%;
+  height: 60px;
   position: absolute;
   display: flex;
   justify-content: flex-end;
   top: 0;
 }
 
-.responsive-width-footer {
-  width: 10%;
-  height: 3rem;
-  background-color: var(--c-background-light);
-}
-
-.width-footer {
-  width: 40%;
-  height: 3rem;
-  background-color: var(--c-background-light);
-}
-
 .vervoerregio-path-footer {
-  width: 6rem;
-  height: 3rem;
-  background-color: var(--c-background-light);
-  /* clip-path: url(./the-client-case/assets/svg-path.svg); */
-  clip-path: path("M 96 0 L 0 0 C 48 0 48 48 96 48");
-  /* clip-path: ellipse(20px 20px at 20% 20%); */
+  width: auto;
+  height: 100%;
+}
+
+.vervoerregio-path-footer svg {
+  fill: var(--c-background-light);
+  height: 100%;
 }
 
 .contact {
   flex-direction: column;
-  align-items: center;
 }
 
 .ul-footer li {
   text-decoration: none;
   margin-bottom: 1rem;
-  list-style-position: inside;
+  list-style: none;
+  font-size: 1.125rem;
 }
 
 .footer-bericht label {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   font-weight: 600;
 }
 
@@ -1259,7 +1311,7 @@ input[type="text"] {
   border: 1px solid #ccc;
   border-radius: var(--b-radius-small);
   box-sizing: border-box;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
 }
 
 input[type="email"] {
@@ -1271,7 +1323,7 @@ input[type="email"] {
   border-radius: var(--b-radius-small);
   box-sizing: border-box;
 
-  font-size: 1.1rem;
+  font-size: 1.125rem;
 }
 
 textarea {
@@ -1311,29 +1363,35 @@ textarea {
 .sub-footer {
   display: block;
   justify-content: space-between;
-  align-items: center;
   margin: 0rem 10%;
   padding-bottom: 1rem;
 }
 
 .sub-footer p {
-  padding-bottom: 1.125rem;
+  padding-bottom: 1rem;
+  color: var(--c-color-light-solid);
+  padding: 0.5rem 6px;
+}
+
+.sub-footer li {
+  text-decoration: none;
+  margin-bottom: 1.125rem;
+  list-style: none;
 }
 
 .sub-footer a {
-  padding: 1rem;
+  padding: 0.5rem 6px;
   display: block;
   color: var(--c-color-light-solid);
   text-decoration: none;
   cursor: pointer;
+  font-size: 1.125rem;
   transition: all 0.3s ease-in-out;
 }
 
-.sub-footer a:hover,
-.sub-footer a:focus {
-  transform: scale(1.2);
-  font-weight: 500;
-  margin: 0;
+.sub-footer a:hover {
+  text-decoration: underline;
+  text-underline-offset: 8px;
 }
 
 @media screen and (min-width: 1190px) {
@@ -1357,7 +1415,7 @@ textarea {
   }
 }
 
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 650px) {
   .footer-content {
     flex-wrap: nowrap;
   }
@@ -1398,6 +1456,7 @@ textarea {
 
   .contact {
     width: 30%;
+    align-items: center;
   }
 
   .footer-bericht {
