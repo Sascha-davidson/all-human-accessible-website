@@ -6,7 +6,7 @@ burger.addEventListener('click', () => {
   console.log(nav.classList)
   nav.classList.toggle('open-menu')
   socialmedia.classList.toggle('open-menu')
-  burger.classList.toggle('burger-toggle');
+  burger.classList.toggle('burger-toggle')
 
 
 })
@@ -18,7 +18,6 @@ modeSwitch.addEventListener('click', function () {
     modeSwitch.checked ? 
     document.documentElement.setAttribute("data-theme", "dark") : 
     document.documentElement.setAttribute("data-theme", "");
-    burger.classList.toggle('toggle');
 
 
 
