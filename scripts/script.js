@@ -19,8 +19,6 @@ modeSwitch.addEventListener('click', function () {
     document.documentElement.setAttribute("data-theme", "dark") : 
     document.documentElement.setAttribute("data-theme", "");
 
-
-
 });
 
 

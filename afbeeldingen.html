@@ -28,8 +28,6 @@
         </a>
       </div>
 
-      <input type="checkbox" id="mode">
-
       <section id="burger" class="burger">
         <section>
           <p>menu</p>
@@ -54,7 +52,21 @@
         </ul>
 
       </nav>
-
+      <dialog id="favDialog">
+        <form>
+          <div class="dialog-content">
+            <label><input type="checkbox" id="mode"> donker moden</label>
+            <label><input type="checkbox" id="mode"> laag / hoog contrast</label>
+  
+            <label><input type="checkbox" id=""> lettergrootte</label>
+            <label><input type="checkbox" id=""> bewegend beeld</label>
+  
+          </div>
+          <button value="cancel">terug</button>
+  
+  
+        </form>
+      </dialog>
     </div>
 
     <section class="vervoerregio-path-box">
@@ -314,7 +326,8 @@
                 <code>alt</code>-attribuut
                 in het <code>&lt;img&gt;</code>-element worden leeg gelaten. Het <code>alt</code>-attribuut moet wel
                 aanwezig zijn maar het heeft dan
-                geen tekst.</p>
+                geen tekst.
+              </p>
 
               <script type="text/plain"
                 class="language-html"><img decoding="async" src="horizontale-lijn.jpg" alt="" /></script>

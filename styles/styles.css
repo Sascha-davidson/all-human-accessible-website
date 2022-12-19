@@ -335,6 +335,7 @@ header nav .main-nav li a {
   margin: 0.7rem 0;
   width: 100%;
   color: var(--c-color-light-solid);
+  
 }
 
 nav button {
@@ -347,6 +348,7 @@ nav button {
   color: var(--c-color-light-solid);
   background-color: var(--c-primary);
   margin: 0.7rem 0;
+  width: fit-content;
 }
 
 @media screen and (min-width: 785px) {
@@ -422,7 +424,6 @@ nav button {
 /* dialog */
 
 dialog{
-  display: flex;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
@@ -445,7 +446,6 @@ dialog{
 
 dialog::backdrop {
   background: rgba(0, 0, 0, 0.8);
-
 }
 
 dialog form{
@@ -453,23 +453,30 @@ dialog form{
   justify-content: space-between;
   flex-direction: column;
   margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
+dialog form .dialog-content{
+  display: flex;
+  flex-direction: column;
 }
 
 dialog label{
   color: var(--c-color-dark);
-  font-size: 32px;
+  font-size: 2.5rem;
 }
 
 dialog button {
-  font-size: 1.125rem;
+  font-size: 2.5rem;
   transition: all 0.3s ease-in-out;
-  padding: 0 2rem;
+  padding: .5rem 2rem;
   border-radius: var(--b-radius-medium);
   border: none;
-  height: calc(70px - 2rem);
   color: var(--c-color-light-solid);
   background-color: var(--c-primary);
   margin: 0.7rem 0;
+  width: fit-content;
 }
 
 /* hoofd img */
@@ -639,14 +646,14 @@ dialog button {
 .header-style button {
   font-size: 1.125rem;
   transition: all 0.3s ease-in-out;
-  padding: 0 2rem;
+  padding: .5rem 2rem;
   border-radius: var(--b-radius-medium);
   border: none;
   height: calc(70px - 2rem);
   color: var(--c-color-light-solid);
   background-color: var(--c-primary);
-  margin: 2rem 0;
-  width: 13rem;
+  margin: 2rem .5rem;
+  width: fit-content;
 }
 
 @media screen and (min-width: 785px) {
