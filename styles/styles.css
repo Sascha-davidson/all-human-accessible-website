@@ -132,8 +132,15 @@ h4 {
 }
 
 p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: var(--c-color-dark);
+}
+
+@media screen and (min-width: 785px) {
+  p{
+    font-size: 1.125rem;
+
+  }  
 }
 
 /* Header */
@@ -197,8 +204,7 @@ header .site-header {
 
 /* burger*/
 
-.burger,
-.mobile-nav {
+.burger {
   display: none;
 }
 
@@ -295,6 +301,7 @@ header nav {
   position: absolute;
   top: 60px;
   right: 0;
+  height: calc(100vh - 60px - 5rem);
   height: calc(100svh - 60px - 5rem);
   max-height: calc(1080px - 5rem);
   width: 80vw;
@@ -412,10 +419,64 @@ nav button {
   }
 }
 
+/* dialog */
+
+dialog{
+  display: flex;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  border: var(--c-box-shadow-dark);
+  left: 0;
+  right: 0;
+  
+  width: 90vw;
+  max-width: 800px;
+  height: 60vh;
+
+  top: 20vh;
+  min-height: 400px;
+
+  padding: 3rem;
+  background-color: var(--c-background-light);
+  border-radius: var(--b-radius-medium);
+  border: 5px solid #fff;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.8);
+
+}
+
+dialog form{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+dialog label{
+  color: var(--c-color-dark);
+  font-size: 32px;
+}
+
+dialog button {
+  font-size: 1.125rem;
+  transition: all 0.3s ease-in-out;
+  padding: 0 2rem;
+  border-radius: var(--b-radius-medium);
+  border: none;
+  height: calc(70px - 2rem);
+  color: var(--c-color-light-solid);
+  background-color: var(--c-primary);
+  margin: 0.7rem 0;
+}
+
 /* hoofd img */
 
 .header-style {
   width: 100%;
+  height: calc(100vh - 60px);
   height: calc(100svh - 60px);
   position: relative;
   z-index: 1;
@@ -635,6 +696,7 @@ nav button {
   }
 
   .header-style {
+    height: calc(100vh - 120px);
     height: calc(100svh - 120px);
     min-height: 650px;
   }
@@ -698,6 +760,7 @@ nav button {
 .socialmedias-button {
   display: flex;
   align-items: flex-end;
+  height: calc(100vh - 60px);
   height: calc(100svh - 60px);
   z-index: 4;
   position: absolute;
@@ -894,6 +957,7 @@ main {
   display: flex;
   justify-content: space-between;
   gap: var(--large-gap);
+  padding-top: 5rem;
 }
 
 .progresion {
@@ -902,7 +966,7 @@ main {
 }
 
 .title {
-  padding: 2rem 0;
+  padding: 5rem 0 2rem 0;
 }
 
 .informatie {
@@ -946,7 +1010,7 @@ main {
 
 .title-afbeeldingen {
   max-width: 800px;
-  padding: 2rem 0;
+  padding: 0rem 0 2rem 0;
 }
 
 .afbeelding-content {
@@ -1077,6 +1141,7 @@ main {
 
 details h3 {
   font-size: 1.3rem;
+  font-weight: 600;
   color: var(--c-color-dark);
 }
 
@@ -1090,6 +1155,7 @@ details[open] h3 {
 
 details h4 {
   font-size: 1.3rem;
+  font-weight: 500;
   color: var(--c-color-dark);
 }
 

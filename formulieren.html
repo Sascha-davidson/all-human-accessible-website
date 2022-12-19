@@ -119,7 +119,7 @@
 
     <section class="header-style-content-3">
       <section class="header-style-title">
-        <h1>Afbeeldingen</h1>
+        <h1>Formulieren</h1>
       </section>
     </section>
   </div>
@@ -130,15 +130,22 @@
         <section class="title-afbeeldingen">
 
           <p>
-            Content van een website dat niet uit tekst bestaat, zoals foto’s, icoontjes en andere afbeeldingen, kan
-            toegankelijk worden gemaakt door deze ook als tekst beschikbaar te maken. Tekst kan namelijk door
-            hulptechnologieën op verschillende manieren worden gepresenteerd. Voorleessoftware kan een tekst omzetten in
-            spraak (auditief) en een brailleleesregel kan het vertalen naar braille (tactiel). Zo worden afbeelding ook
-            toegankelijk voor bezoekers die de afbeelding niet kunnen waarnemen.
+            Formulieren kunnen toegankelijk worden gemaakt door een combinatie van techniek, vormgeving en tekst. Door
+            een formulier in de code goed op te bouwen is het te bedienen met het toetsenbord, weet een bezoeker hoe een
+            invoerfout opgelost kan worden, en kunnen bezoekers die hulptechnologieën gebruiken het formulier ook goed
+            invullen.
             <br><br>
-            De invulling van zo’n tekstalternatief is afhankelijk van de context van de afbeelding en kan per situatie
-            zelfs verschillen voor dezelfde afbeelding.
+            Een formulier kan bestaan uit verschillende formuliervelden:
           </p>
+
+          <ul>
+            <li>Invoervelden</li>
+            <li>Selectievakjes</li>
+            <li>Keuzerondjes</li>
+            <li>Keuzelijsten</li>
+            <li>enz.</li>
+
+          </ul>
         </section>
 
         <div class="details-box-shadow">
@@ -146,23 +153,40 @@
           <details>
             <summary>
               <i class="fa-solid fa-caret-down"></i>
-              <h3>Zorg dat afbeeldingen in de code een tekstalternatief kunnen krijgen</h3>
+              <h3>Zorg voor duidelijke labels en instructies bij invoervelden</h3>
               <label><input type="checkbox">
                 <i class="fa-solid fa-check"></i>
               </label>
             </summary>
 
             <section class="detail-list">
-              <p>Alle afbeeldingen moeten een tekstalternatief hebben. Een tekstalternatief kan op verschillende
-                manieren worden toegevoegd:</p>
-              <h4>Tekstalternatief voor een <code>&lt;img&gt;</code>-element</h4>
-              <p>Bij een <code>&lt;img&gt;</code>-element wordt een tekstalternatief gegeven met behulp van het
-                <code>&lt;alt&gt;</code>-attribuut.
+              <h4>Zorg voor labels bij invoervelden</h4>
+              <p>Labels zijn het belangrijkste element voor een toegankelijk formulier. Zorg voor labels bij alle invoervelden of ander formulierelementen zoals selectievakjes, keuzerondjes en keuzelijsten. Een duidelijk label beschrijft precies wat er in het veld ingevuld moet worden, is zichtbaar voor alle bezoekers en staat dichtbij het invoerveld.
+                <br><br>
+                Het label moet in de code worden gekoppeld aan het invoerveld. Zo maak je het invoerveld ook toegankelijk voor bezoekers die gebruik maken van hulptechnologieën. Het label is de naam van het invoerveld. Een label vergroot ook het klikbare gebied waarmee een invoerveld kan worden geselecteerd. Dit is handig voor bijvoorbeeld bezoekers met een motorische beperking.</p>
+              
+              <h4>Koppel labels in de code aan een invoerveld</h4>
+
+              <p>Labels zijn het belangrijkste element voor een toegankelijk formulier. Zorg voor labels bij alle
+                invoervelden of ander formulierelementen zoals selectievakjes, keuzerondjes en keuzelijsten. Een
+                duidelijk label beschrijft precies wat er in het veld ingevuld moet worden, is zichtbaar voor alle
+                bezoekers en staat dichtbij het invoerveld.
+                <br><br>
+                Het label moet in de code worden gekoppeld aan het invoerveld. Zo maak je het invoerveld ook
+                toegankelijk voor bezoekers die gebruik maken van hulptechnologieën. Het label is de naam van het
+                invoerveld. Een label vergroot ook het klikbare gebied waarmee een invoerveld kan worden geselecteerd.
+                Dit is handig voor bijvoorbeeld bezoekers met een motorische beperking.
               </p>
+              <h4>Koppel labels in de code aan een invoerveld</h4>
+              <p>Labels worden geplaatst met het <label&gt;</code>-element. Het koppelen van een <label>-element aan een
+                    formulierelement gebeurt met een for/id-koppeling. Geef hiervoor het <label>-element een
+                      for-attribuut en het bijbehorende formulierelement een id-attribuut met dezelfde waarde.
+                      <br><br>
+                      In de code ziet dat er zo uit:</p>
               <p>In de code ziet dat er zo uit:</p>
               <script type="text/plain"
                 class="language-html"><img decoding="async" src="hond.jpg" alt="Hond speelt met een bal"></script>
-
+                <code>&lt;svg&gt;</code>
               <h4>Tekstalternatief voor een <code>&lt;svg&gt;</code>-element</h4>
               <p>Bij een <code>&lt;svg&gt;</code>-element wordt een tekstalternatief gegeven met behulp van het
                 <code>&lt;title&gt;</code>-element in de svg. Gebruik ook aria-attribuut <code>&lt;role="img"&gt;</code>
@@ -560,7 +584,7 @@
             <label>achternaam<input type="text" id="lname" name="lastname" placeholder="Davidson"></label>
           </div>
           <label>Bericht</label><textarea placeholder="Berijk ons met al je vragen"></textarea>
-          <input type="submit" value="Submit">
+          <input type="submit" value="Verstuur">
         </form>
       </div>
     </Section>

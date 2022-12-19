@@ -34,7 +34,6 @@ pre[class*=language-]>code{
     z-index:1;
     background-color:#f6f8f9;
     background-size:3em 3em;
-    margin: 0 1em;
     background-origin:content-box;
     background-attachment:local;
     padding: 1rem;

@@ -23,3 +23,16 @@ modeSwitch.addEventListener('click', function () {
 
 });
 
+
+const showDialog = document.getElementById('filter');
+const favDialog = document.getElementById('favDialog');
+
+
+showDialog.addEventListener('click', () => {
+  favDialog.showModal();
+});
+
+favDialog.addEventListener('close', () => {
+  outputBox.value = `ReturnValue: ${favDialog.returnValue}.`;
+});
+
