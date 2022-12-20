@@ -14,12 +14,18 @@ burger.addEventListener('click', () => {
 
 let modeSwitch = document.getElementById("mode");
 
+
 modeSwitch.addEventListener('click', function () {
     modeSwitch.checked ? 
     document.documentElement.setAttribute("data-theme", "dark") : 
     document.documentElement.setAttribute("data-theme", "");
 
 });
+
+
+
+
+
 
 
 const showDialog = document.getElementById('filter');
@@ -33,4 +39,6 @@ showDialog.addEventListener('click', () => {
 favDialog.addEventListener('close', () => {
   outputBox.value = `ReturnValue: ${favDialog.returnValue}.`;
 });
+
+
 
