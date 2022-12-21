@@ -660,7 +660,7 @@ dialog button {
 .header-style .header-style-title div{
   display: flex;
   flex-wrap: wrap;
-  margin: 0 1rem;
+  margin: 0 0rem;
   gap: .5rem;
 }
 
