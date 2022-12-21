@@ -39,6 +39,8 @@
   --b-radius-rounded: 50px;
 
   --c-box-shadow-dark: 0px 5px 15px rgba(0, 0, 0, 0.35);
+
+  --logo: url(../assets/vervoerregio-logo.svg)
 }
 
 [data-theme="dark"] {
@@ -55,6 +57,8 @@
   --c-color-dark-2: #f5f5f5;
 
   --c-box-shadow-dark: 0px 0px 15px rgba(225, 225, 255, 0.35);
+
+  --logo: url(../assets/vervoerregio-logo-white.svg)
 }
 
 ::-webkit-scrollbar {
@@ -103,6 +107,7 @@ h1 {
   font-weight: 400;
   display: inline-block;
   padding: 1rem 0;
+  line-height: 1;
 }
 
 strong {
@@ -121,8 +126,6 @@ h3 {
   /* font-size: 1.3rem; */
   font-size: clamp(1.5rem, 3vw, 2.5rem);
   font-weight: 500;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
 }
 
 h4 {
@@ -132,7 +135,7 @@ h4 {
 }
 
 p {
-  font-size: 1rem;
+  font-size: .8rem;
   color: var(--c-color-dark);
 }
 
@@ -165,9 +168,12 @@ header .site-header {
 }
 
 .site-identity img {
+  content: var(--logo);
   width: 10rem;
   margin-top: 0rem;
 }
+
+
 
 @media screen and (min-width: 785px) {
   header .site-header {
@@ -194,7 +200,7 @@ header .site-header {
     flex-wrap: nowrap;
     height: 70px;
     position: relative;
-    gap: none;
+    gap: 0;
   }
 
   .site-identity img {
@@ -241,33 +247,6 @@ header .site-header {
 
   .burger-toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
-  }
-
-  .mobile-nav ul li {
-    list-style-type: none;
-  }
-
-  .mobile-nav ul li a {
-    color: var(--c-color-light-solid);
-    text-decoration: none;
-    font-size: 1.125rem;
-    display: block;
-    transition: all 0.3s ease-in-out;
-    padding: 0.3rem 6px;
-    margin: 0.7rem 0;
-  }
-
-  .mobile-nav ul li a:hover,
-  .mobile-nav ul li a:focus {
-    color: var(--c-primary);
-    font-weight: 500;
-  }
-
-  .mobile-nav .social-media-mobile {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    height: 100%;
   }
 
   @keyframes navlinkfade {
@@ -338,6 +317,10 @@ header nav .main-nav li a {
   
 }
 
+header nav .main-nav li .active {
+  color: var(--c-primary);
+}
+
 nav button {
   font-size: 1.125rem;
   transition: all 0.3s ease-in-out;
@@ -397,7 +380,7 @@ nav button {
   }
 
   header nav .main-nav li a:hover,
-  header nav .main-nav li a:focus {
+  header nav .main-nav li a:focus{
     color: var(--c-primary);
     font-weight: 500;
   }
@@ -445,7 +428,7 @@ dialog{
 }
 
 dialog::backdrop {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 dialog form{
@@ -568,7 +551,7 @@ dialog button {
   color: var(--c-color-light-solid);
   overflow: hidden;
   margin-top: -40px;
-  min-height: 450px;
+  min-height: 600px;
 }
 
 
@@ -674,6 +657,13 @@ dialog button {
   justify-content: center;
 }
 
+.header-style .header-style-title div{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 1rem;
+  gap: .5rem;
+}
+
 .header-style-image {
   display: none;
 }
@@ -723,7 +713,7 @@ dialog button {
   height: calc(70px - 2rem);
   color: var(--c-color-light-solid);
   background-color: var(--c-primary);
-  margin: 2rem .5rem;
+  margin: 1rem 0 0 0;
   width: fit-content;
 }
 
@@ -802,6 +792,10 @@ dialog button {
   .header-style-content-3 {
     padding-top: 60px;
   }
+
+  .header-style button {
+  margin: 1rem 0 1rem 0;
+}
 }
 
 @media screen and (min-width: 1190px) {
