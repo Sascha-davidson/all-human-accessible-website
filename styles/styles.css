@@ -40,7 +40,7 @@
 
   --c-box-shadow-dark: 0px 5px 15px rgba(0, 0, 0, 0.35);
 
-  --logo: url(../assets/vervoerregio-logo.svg)
+  --logo: url(../assets/vervoerregio-logo.svg);
 }
 
 [data-theme="dark"] {
@@ -58,7 +58,7 @@
 
   --c-box-shadow-dark: 0px 0px 15px rgba(225, 225, 255, 0.35);
 
-  --logo: url(../assets/vervoerregio-logo-white.svg)
+  --logo: url(../assets/vervoerregio-logo-white.svg);
 }
 
 ::-webkit-scrollbar {
@@ -124,13 +124,13 @@ h2 {
 
 h3 {
   /* font-size: 1.3rem; */
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 500;
 }
 
 h4 {
   /* font-size: 1.8rem; */
-  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(1.5rem, 3vw, 1.7rem);
   font-weight: 600;
 }
 
@@ -146,12 +146,12 @@ p strong {
 }
 
 @media screen and (min-width: 785px) {
-  p{
+  p {
     font-size: 1.125rem;
   }
 
   p strong {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--c-color-dark);
   }
@@ -183,8 +183,6 @@ header .site-header {
   width: 10rem;
   margin-top: 0rem;
 }
-
-
 
 @media screen and (min-width: 785px) {
   header .site-header {
@@ -325,7 +323,6 @@ header nav .main-nav li a {
   margin: 0.7rem 0;
   width: 100%;
   color: var(--c-color-light-solid);
-  
 }
 
 header nav .main-nav li .active {
@@ -335,14 +332,21 @@ header nav .main-nav li .active {
 nav button {
   font-size: 1.125rem;
   transition: all 0.3s ease-in-out;
-  padding: 0 2rem;
+  padding: 0.3rem 2rem;
   border-radius: var(--b-radius-medium);
   border: none;
   height: calc(70px - 2rem);
   color: var(--c-color-light-solid);
-  background-color: var(--c-primary);
-  margin: 0.7rem 0;
-  width: fit-content;
+  background-color: var(--c-primary);  width: fit-content;
+  height: fit-content;
+  border: 4px solid var(--c-primary);
+  cursor: pointer;
+}
+
+nav button:hover {
+  border: 4px solid var(--c-primary);
+  color: var(--c-color-light-solid);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 @media screen and (min-width: 785px) {
@@ -391,7 +395,7 @@ nav button {
   }
 
   header nav .main-nav li a:hover,
-  header nav .main-nav li a:focus{
+  header nav .main-nav li a:focus {
     color: var(--c-primary);
     font-weight: 500;
   }
@@ -401,7 +405,7 @@ nav button {
   }
 
   nav button {
-    margin: auto 0;
+    margin: auto 0 0 .5rem;
   }
 }
 
@@ -417,14 +421,14 @@ nav button {
 
 /* dialog */
 
-dialog{
+dialog {
   position: absolute;
   margin-left: auto;
   margin-right: auto;
   border: var(--c-box-shadow-dark);
   left: 0;
   right: 0;
-  
+
   width: 90vw;
   max-width: 800px;
   height: 80vh;
@@ -442,7 +446,7 @@ dialog::backdrop {
   background: rgba(0, 0, 0, 0.7);
 }
 
-dialog form{
+dialog form {
   display: flex;
   justify-content: space-between;
   gap: 0rem;
@@ -452,31 +456,41 @@ dialog form{
   width: auto;
 }
 
-dialog form .dialog-content{
+dialog form .dialog-content {
   display: flex;
   flex-direction: column;
 }
 
-dialog label{
+dialog label {
   color: var(--c-color-dark);
   font-size: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: .5rem;
+  gap: 0.5rem;
   margin: 0 0 1rem 0;
 }
 
 dialog button {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   transition: all 0.3s ease-in-out;
-  padding: .5rem 2rem;
+  padding: 0.3rem 2rem;
   border-radius: var(--b-radius-medium);
   border: none;
+  height: calc(70px - 2rem);
   color: var(--c-color-light-solid);
   background-color: var(--c-primary);
-  margin: 0.7rem 0;
+  margin: 1rem 0 0 0;
   width: fit-content;
+  height: fit-content;
+  border: 8px solid var(--c-primary);
+  cursor: pointer;
+}
+
+dialog button:hover {
+  border: 8px solid var(--c-primary);
+  color: var(--c-color-light-solid);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 dialog input[type="checkbox"] {
@@ -515,33 +529,29 @@ dialog input[type="checkbox"]:checked {
 }
 
 @media screen and (min-width: 440px) {
-
-  dialog{
+  dialog {
     height: 60vh;
     top: 20vh;
   }
 
-  dialog label{
+  dialog label {
     display: block;
     margin: 1rem 0;
   }
 }
 
-
 @media screen and (min-width: 785px) {
+  dialog {
+    padding: 3rem;
+  }
 
-  dialog{
-  padding: 3rem;
-}
+  dialog label {
+    font-size: 2.5rem;
+  }
 
-dialog label{
-  font-size: 2.5rem;
-}
-
-dialog button {
-  font-size: 2.5rem;
-
-}
+  dialog button {
+    font-size: 2.5rem;
+  }
 }
 
 /* hoofd img */
@@ -553,7 +563,7 @@ dialog button {
   position: relative;
   z-index: 1;
   max-height: 1080px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
     url("../assets/vervoerregio-amsterdam-header.jpg");
   background-color: #cccccc;
   background-repeat: no-repeat;
@@ -564,7 +574,6 @@ dialog button {
   margin-top: -40px;
   min-height: 600px;
 }
-
 
 .header-style-2 {
   width: 100%;
@@ -667,16 +676,15 @@ dialog button {
   justify-content: center;
 }
 
-.header-style .header-style-title div{
+.header-style .header-style-title div {
   display: flex;
   flex-wrap: wrap;
   margin: 0 0rem;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
-.header-style-title p strong{
+.header-style-title p strong {
   color: var(--c-color-light-solid);
-
 }
 
 .header-style-image {
@@ -722,7 +730,7 @@ dialog button {
 .header-style button {
   font-size: 1.125rem;
   transition: all 0.3s ease-in-out;
-  padding: .5rem 2rem;
+  padding: 0.3rem 2rem;
   border-radius: var(--b-radius-medium);
   border: none;
   height: calc(70px - 2rem);
@@ -730,22 +738,34 @@ dialog button {
   background-color: var(--c-primary);
   margin: 1rem 0 0 0;
   width: fit-content;
+  height: fit-content;
+  border: 4px solid var(--c-primary);
+  cursor: pointer;
+}
+
+.header-style button:hover {
+  border: 4px solid var(--c-primary);
+  color: var(--c-color-light-solid);
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header-style button a{
+  text-decoration: none;
+  color: var(--c-color-light-solid);
+
 }
 
 @media screen and (min-width: 785px) {
-
-  .header-style-content{
+  .header-style-content {
     padding: 0rem 10%;
     padding-top: 60px;
     padding-bottom: 0;
-
   }
 
-  .header-style-content-2{
+  .header-style-content-2 {
     padding: 0rem 10%;
     padding-top: 60px;
     padding-bottom: 9rem;
-
   }
 
   .vervoerregio-path-box {
@@ -809,8 +829,8 @@ dialog button {
   }
 
   .header-style button {
-  margin: 1rem 0 1rem 0;
-}
+    margin: 1rem 0 1rem 0;
+  }
 }
 
 @media screen and (min-width: 1190px) {
@@ -1060,7 +1080,6 @@ main {
 
   .content-richtlinen {
     flex-direction: row;
-
   }
 }
 
@@ -1068,16 +1087,16 @@ main {
   padding: 5rem 0 2rem 0;
 }
 
-.title-content{
-display: flex;
-flex-direction: column;
-gap: 2rem;
-margin-bottom: 5rem;
+.title-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 5rem;
 }
 
-.title-content div{
-width: 100%;
-  }
+.title-content div {
+  width: 100%;
+}
 
 .informatie {
   display: flex;
@@ -1164,7 +1183,7 @@ width: 100%;
   width: 100%;
 }
 
-.checklist-box .checklist-box-content{
+.checklist-box .checklist-box-content {
   max-width: 800px;
 }
 
@@ -1206,37 +1225,30 @@ width: 100%;
 }
 
 main ul,
-main ol{
+main ol {
   font-size: 1rem;
   color: var(--c-color-dark);
   list-style-position: inside;
 }
 
-
-
 @media screen and (min-width: 785px) {
-  main{
+  main {
     margin: 0rem 10%;
-
   }
 
-  .title-content{
+  .title-content {
     display: flex;
     flex-direction: row;
     margin-bottom: 5rem;
-    }
+  }
 
-    main ul,
-    main ol{
-      font-size: 1.125rem;
-    }
-
+  main ul,
+  main ol {
+    font-size: 1.125rem;
+  }
 }
 
-
-
 @media screen and (min-width: 450px) {
-
   .informatie {
     flex-wrap: nowrap;
     overflow: auto;
@@ -1246,11 +1258,9 @@ main ol{
   .informatie-box {
     min-width: 250px;
   }
-
 }
 
 @media screen and (min-width: 1500px) {
-
 }
 
 @media screen and (min-width: 1000px) {
@@ -1259,7 +1269,7 @@ main ol{
   }
 
   .checklist-box img {
-   aspect-ratio: 1/1;
+    aspect-ratio: 1/1;
   }
 }
 
@@ -1269,7 +1279,7 @@ main ol{
   }
 
   .checklist-box img {
-   aspect-ratio: 2/1;
+    aspect-ratio: 2/1;
   }
 }
 
@@ -1314,7 +1324,7 @@ details[open] h4 {
   color: var(--c-color-dark);
 }
 
-details::marker{
+details::marker {
   display: none;
 }
 
@@ -1352,7 +1362,6 @@ details:hover > summary {
 .content-richtlinen details:hover summary i.fa-caret-down {
   color: var(--c-color-light-solid);
   display: none;
-
 }
 
 .content-richtlinen details[open] summary i.fa-caret-down {
@@ -1360,7 +1369,6 @@ details:hover > summary {
   transition-duration: 0.5s;
   color: var(--c-color-light-solid);
   display: none;
-
 }
 
 .content-richtlinen summary i.fa-caret-down {
@@ -1416,36 +1424,30 @@ details:hover > summary {
 }
 
 @media screen and (min-width: 783px) {
-
   details h3,
   details h4 {
     font-size: 1.3rem;
-
   }
 
   .content-richtlinen details summary i.fa-caret-down {
     color: var(--c-primary);
     display: block;
   }
-  
+
   .content-richtlinen details:hover summary i.fa-caret-down {
     color: var(--c-color-light-solid);
     display: block;
-
   }
-  
+
   .content-richtlinen details[open] summary i.fa-caret-down {
     transform: rotate(-180deg);
     transition-duration: 0.5s;
     color: var(--c-color-light-solid);
     display: block;
-
   }
-
 }
 
 @media screen and (min-width: 1000px) {
-
 }
 
 /* details content */
