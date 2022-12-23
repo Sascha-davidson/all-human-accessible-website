@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/prism.css">
 
-  <title>afbeelding</title>
+  <title>Teksten</title>
   <link rel="icon" type="image/png" href="assets/va-favicon.svg" />
 </head>
 
@@ -25,10 +25,9 @@
       <div class="site-identity">
         <a href="index.html">
           <img src="assets/vervoerregio-logo.svg" alt="Vervoerregio Amsterdam">
+
         </a>
       </div>
-
-      <input type="checkbox" id="mode">
 
       <section id="burger" class="burger">
         <section>
@@ -45,10 +44,10 @@
       <nav>
         <ul class="main-nav">
           <li><a href="index.html">Home</a></li>
-          <li><a href="#">wat gebeurt er</a></li>
-          <li><a href="#">Wat doen wij?</a></li>
-          <li><a href="#">Wie zijn wij?</a></li>
-          <li><a href="#">Wcag Richtlijnen</a></li>
+          <li><a href="kennisbank.html">Kennisbank</a></li>
+          <li><a href="wet-en-regelgeving.html">Wet- en regelgeving</a></li>
+          <li><a href="richtlijnen.html">Richtlijnen</a></li>
+          <li><a href="checklist.html">checklist</a></li>
           <button id="filter">Filter</button>
 
         </ul>
@@ -56,6 +55,22 @@
       </nav>
 
     </div>
+
+    <dialog id="favDialog">
+      <form>
+        <div class="dialog-content">
+          <label><input type="checkbox" id="mode"> Donker moden</label>
+          <label><input type="checkbox" id=""> Laag / hoog contrast</label>
+
+          <label><input type="checkbox" id=""> Lettergrootte</label>
+          <label><input type="checkbox" id=""> Bewegend beeld</label>
+
+        </div>
+        <button value="cancel">Terug</button>
+
+
+      </form>
+    </dialog>
 
     <section class="vervoerregio-path-box">
       <div class="vervoerregio-path-box-devided">
@@ -90,14 +105,14 @@
           <span>Twitter</span>
         </a>
 
-        <a href="https://www.facebook.com/vervoerregio" class="button">
+        <a href="https://www.instagram.com/vervoerregio/" class="button">
           <div class="icon">
             <i class="fab fa-instagram"></i>
           </div>
           <span>Instagram</span>
         </a>
 
-        <a href="#" class="button">
+        <a href="https://www.linkedin.com/company/vervoerregio-amsterdam/?originalSubdomain=nl" class="button">
           <div class="icon">
             <i class="fab fa-linkedin"></i>
           </div>
@@ -119,7 +134,7 @@
 
     <section class="header-style-content-3">
       <section class="header-style-title">
-        <h1>Afbeeldingen</h1>
+        <h1>Teksten</h1>
       </section>
     </section>
   </div>
@@ -129,15 +144,9 @@
       <div class="afbeelding-content">
         <section class="title-afbeeldingen">
 
-          <p>
-            Content van een website dat niet uit tekst bestaat, zoals foto’s, icoontjes en andere afbeeldingen, kan
-            toegankelijk worden gemaakt door deze ook als tekst beschikbaar te maken. Tekst kan namelijk door
-            hulptechnologieën op verschillende manieren worden gepresenteerd. Voorleessoftware kan een tekst omzetten in
-            spraak (auditief) en een brailleleesregel kan het vertalen naar braille (tactiel). Zo worden afbeelding ook
-            toegankelijk voor bezoekers die de afbeelding niet kunnen waarnemen.
+          <p>Tekst is de meest toegankelijke vorm van digitale informatie. Tekst kan namelijk door hulptechnologieën op verschillende manieren worden gepresenteerd. Voorleessoftware kan een tekst bijvoorbeeld omzetten in spraak (auditief) en een brailleleesregel kan het vertalen naar braille (tactiel).
             <br><br>
-            De invulling van zo’n tekstalternatief is afhankelijk van de context van de afbeelding en kan per situatie
-            zelfs verschillen voor dezelfde afbeelding.
+            Een duidelijke structuur is belangrijk voor de toegankelijkheid van een tekst. Voor structuur worden elementen gebruikt zoals koppen, tussenkoppen en opsommingen. Deze structuur moet ook goed in de code worden vastgelegd. Daarnaast moet de inhoud begrijpelijk zijn en in een logische volgorde aan bezoekers wordt gepresenteerd. Ook dit moet allemaal op de juiste manier in de code worden aangegeven.
           </p>
         </section>
 
@@ -146,7 +155,7 @@
           <details>
             <summary>
               <i class="fa-solid fa-caret-down"></i>
-              <h3>Zorg dat afbeeldingen in de code een tekstalternatief kunnen krijgen</h3>
+              <h3>Geef webpagina's een titel die het onderwerp of doel van de pagina beschrijft</h3>
               <label><input type="checkbox">
                 <i class="fa-solid fa-check"></i>
               </label>
@@ -198,7 +207,7 @@
           <details>
             <summary>
               <i class="fa-solid fa-caret-down"></i>
-              <h3>Geef afbeeldingen die informatie overdragen een beschrijvend tekstalternatief</h3>
+              <h3>Gebruik koppen die het onderwerp of doel van de onderliggende tekst beschrijven</h3>
               <label><input type="checkbox">
                 <i class="fa-solid fa-check"></i>
               </label>
@@ -222,7 +231,7 @@
           <details>
             <summary>
               <i class="fa-solid fa-caret-down"></i>
-              <h3>Geef complexe afbeeldingen een langere beschrijving</h3>
+              <h3>Zorg dat koppen zijn opgemaakt met een kop-element</h3>
               <label><input type="checkbox">
                 <i class="fa-solid fa-check"></i>
               </label>
@@ -272,7 +281,7 @@
           <details>
             <summary>
               <i class="fa-solid fa-caret-down"></i>
-              <h3>Geef afbeeldingen die ook een link zijn een tekstalternatief dat het doel van de link beschrijft</h3>
+              <h3>Zorg dat lijsten zijn opgemaakt met een lijst-element</h3>
               <label><input type="checkbox">
                 <i class="fa-solid fa-check"></i>
               </label>
@@ -322,7 +331,7 @@
           <details>
             <summary>
               <i class="fa-solid fa-caret-down"></i>
-              <h3>Zorg dat decoratieve afbeeldingen door hulptechnologieën genegeerd kunnen worden</h3>
+              <h3>Zorg dat tabellen zijn opgemaakt met een tabel-element</h3>
               <label><input type="checkbox">
                 <i class="fa-solid fa-check"></i>
               </label>
@@ -372,7 +381,7 @@
           <details>
             <summary>
               <i class="fa-solid fa-caret-down"></i>
-              <h3>Gebruik geen afbeeldingen van tekst</h3>
+              <h3>Geef links een linktekst die het doel van de link beschrijft</h3>
               <label><input type="checkbox">
                 <i class="fa-solid fa-check"></i>
               </label>
@@ -422,7 +431,7 @@
           <details>
             <summary>
               <i class="fa-solid fa-caret-down"></i>
-              <h3>Zorg dat bewegende content kan worden gepauzeerd, gestopt of worden uitgezet</h3>
+              <h3>Gebruik in instructies geen onderdelen die alleen worden aangeduid met kleur, vorm of locatie</h3>
               <label><input type="checkbox">
                 <i class="fa-solid fa-check"></i>
               </label>
@@ -472,7 +481,57 @@
           <details>
             <summary>
               <i class="fa-solid fa-caret-down"></i>
-              <h3>Gebruik geen content dat meer dan 3 keer per seconde flitst</h3>
+              <h3>Geef de taal van de pagina aan</h3>
+              <label><input type="checkbox">
+                <i class="fa-solid fa-check"></i>
+              </label>
+            </summary>
+
+            <section class="detail-list">
+              <img class="img-detail-list" src="assets/1.1.1-Niet-tekstuele-content.png" alt="test">
+              <p>Alle niet-tekstuele content die aan de gebruiker wordt gepresenteerd, heeft een tekstalternatief dat
+                een
+                gelijkwaardig doel dient, behalve voor de hierna vermelde situaties.</p>
+              <ul>
+                <li>Bedieningselementen, invoer: Als niet-tekstuele content een bedieningselement is of gebruikersinvoer
+                  accepteert, dan heeft deze een naam die het doel ervan beschrijft. (We verwijzen naar succescriterium
+                  4.1.2 voor aanvullende eisen ten aanzien van bedieningselementen en content die gebruikersinvoer
+                  accepteren.)</li>
+                <li>Op tijd gebaseerde media: Als niet-tekstuele content op tijd gebaseerde media is, dan leveren
+                  tekstalternatieven ten minste een beschrijving van de niet-tekstuele content. (We verwijzen naar
+                  Richtlijn
+                  1.2 voor aanvullende eisen ten aanzien van media.)</li>
+                <li>Test: Als niet-tekstuele content een test of oefening is die, als ze door middel van tekst
+                  gepresenteerd
+                  wordt onjuist zou zijn, dan leveren tekstalternatieven ten minste een beschrijving van de
+                  niet-tekstuele
+                  content.</li>
+                <li>Zintuiglijk: Als niet-tekstuele content primair is bedoeld om een specifieke zintuiglijke ervaring
+                  te
+                  creëren, dan leveren tekstalternatieven ten minste een beschrijving van de niet-tekstuele content.
+                </li>
+                <li>CAPTCHA: Als het doel van niet-tekstuele content is om te bevestigen dat content wordt gebruikt door
+                  een
+                  persoon in plaats van een computer, dan worden tekstalternatieven geleverd die het doel van de
+                  niet-tekstuele content identificeren en beschrijven. En er worden alternatieve vormen van CAPTCHA
+                  aangeboden gebruikmakend van uitvoermodes voor verschillende soorten van zintuiglijke perceptie om
+                  tegemoet te komen aan verschillende functiebeperkingen.</li>
+                <li>Decoratie, opmaak, onzichtbaar: Als niet-tekstuele content puur decoratief is, slechts voor visuele
+                  opmaak wordt gebruikt, of niet aan gebruikers wordt gerepresenteerd, dan wordt het op zo’n manier
+                  geïmplementeerd dat het genegeerd kan worden door hulptechnologie.</li>
+              </ul>
+              <a href="#"><button class="detail-button">Bekijk een voorbeeld website</button></a>
+              <!--<a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html"><button
+              class="detail-button">Niet-tekstuele content begrijpen </button></a>
+          <a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=231%2C111#non-text-content"><button
+              class="detail-button">Hoe te voldoen aan Niet-tekstuele content </button></a>-->
+            </section>
+          </details>
+
+          <details>
+            <summary>
+              <i class="fa-solid fa-caret-down"></i>
+              <h3>Geef de taal aan van tekst dat in een andere taal is geschreven</h3>
               <label><input type="checkbox">
                 <i class="fa-solid fa-check"></i>
               </label>

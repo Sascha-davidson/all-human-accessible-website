@@ -18,40 +18,112 @@
 <body>
 
   <header>
+    <div class="site-header">
+      <div class="site-identity">
+        <a href="index.html">
+          <img src="assets/vervoerregio-logo.svg" alt="Vervoerregio Amsterdam">
 
-    <div class="site-identity">
-      <a href="index.html">
-        <img src="assets/vervoerregio-logo.svg" alt="Vervoerregio Amsterdam">
-      </a>
+        </a>
+      </div>
+
+      <section id="burger" class="burger">
+        <section>
+          <p>menu</p>
+        </section>
+        <section>
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </section>
+      </section>
+
+
+      <nav>
+        <ul class="main-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="kennisbank.html">Kennisbank</a></li>
+          <li><a href="wet-en-regelgeving.html">Wet- en regelgeving</a></li>
+          <li><a href="richtlijnen.html">Richtlijnen</a></li>
+          <li><a href="checklist.html">checklist</a></li>
+          <button id="filter">Filter</button>
+
+        </ul>
+
+      </nav>
+
     </div>
 
-    <section class="burger">
-      <section>
-        <p>Menu</p>
-      </section>
-      <section>
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </section>
+    <dialog id="favDialog">
+      <form>
+        <div class="dialog-content">
+          <label><input type="checkbox" id="mode"> Donker moden</label>
+          <label><input type="checkbox" id=""> Laag / hoog contrast</label>
+
+          <label><input type="checkbox" id=""> Lettergrootte</label>
+          <label><input type="checkbox" id=""> Bewegend beeld</label>
+
+        </div>
+        <button value="cancel">Terug</button>
+
+
+      </form>
+    </dialog>
+
+    <section class="vervoerregio-path-box">
+      <div class="vervoerregio-path-box-devided">
+        <section class="responsive-width"></section>
+        <section class="logo-width"></section>
+        <?xml version="1.0" encoding="UTF-8"?>
+        <svg class="vervoerregio-path-curve" id="Laag_1" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 990.38 392.17">
+          <defs>
+
+          </defs>
+          <path class="cls-1" d="M0,392.17V0H990.38C495.19,0,495.19,392.17,0,392.17Z" />
+        </svg>
+      </div>
+
+
+
+      <div id="socialmedia" class="socialmedias-button">
+
+        <a href="https://www.facebook.com/vervoerregio" class="button">
+          <div class="icon">
+            <i class="fab fa-facebook"></i>
+          </div>
+          <span>Facebook</span>
+        </a>
+
+
+        <a href="https://www.twitter.com/vervoerregio" class="button">
+          <div class="icon">
+            <i class="fab fa-twitter"></i>
+          </div>
+          <span>Twitter</span>
+        </a>
+
+        <a href="https://www.instagram.com/vervoerregio/" class="button">
+          <div class="icon">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <span>Instagram</span>
+        </a>
+
+        <a href="https://www.linkedin.com/company/vervoerregio-amsterdam/?originalSubdomain=nl" class="button">
+          <div class="icon">
+            <i class="fab fa-linkedin"></i>
+          </div>
+          <span>Linkedin</span>
+        </a>
+
+        <a href="#" class="button">
+          <div class="icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <span>Github</span>
+        </a>
+      </div>
     </section>
-
-
-    <nav>
-      <ul class="main-nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">wat gebeurt er</a></li>
-        <li><a href="#">Wat doen wij?</a></li>
-        <li><a href="#">Wie zijn wij?</a></li>
-        <li><a href="#">Wcag Richtlijnen</a>
-        </li>
-      </ul>
-
-
-
-
-    </nav>
-
 
   </header>
 

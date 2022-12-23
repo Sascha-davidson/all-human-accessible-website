@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="stylesheet" href="styles/prism.css">
 
-  <title>afbeelding</title>
+  <title>Media</title>
   <link rel="icon" type="image/png" href="assets/va-favicon.svg" />
 </head>
 
@@ -25,10 +25,9 @@
       <div class="site-identity">
         <a href="index.html">
           <img src="assets/vervoerregio-logo.svg" alt="Vervoerregio Amsterdam">
+
         </a>
       </div>
-
-      <input type="checkbox" id="mode">
 
       <section id="burger" class="burger">
         <section>
@@ -45,10 +44,10 @@
       <nav>
         <ul class="main-nav">
           <li><a href="index.html">Home</a></li>
-          <li><a href="#">wat gebeurt er</a></li>
-          <li><a href="#">Wat doen wij?</a></li>
-          <li><a href="#">Wie zijn wij?</a></li>
-          <li><a href="#">Wcag Richtlijnen</a></li>
+          <li><a href="kennisbank.html">Kennisbank</a></li>
+          <li><a href="wet-en-regelgeving.html">Wet- en regelgeving</a></li>
+          <li><a href="richtlijnen.html">Richtlijnen</a></li>
+          <li><a href="checklist.html">checklist</a></li>
           <button id="filter">Filter</button>
 
         </ul>
@@ -56,6 +55,22 @@
       </nav>
 
     </div>
+
+    <dialog id="favDialog">
+      <form>
+        <div class="dialog-content">
+          <label><input type="checkbox" id="mode"> Donker moden</label>
+          <label><input type="checkbox" id=""> Laag / hoog contrast</label>
+
+          <label><input type="checkbox" id=""> Lettergrootte</label>
+          <label><input type="checkbox" id=""> Bewegend beeld</label>
+
+        </div>
+        <button value="cancel">Terug</button>
+
+
+      </form>
+    </dialog>
 
     <section class="vervoerregio-path-box">
       <div class="vervoerregio-path-box-devided">
@@ -90,14 +105,14 @@
           <span>Twitter</span>
         </a>
 
-        <a href="https://www.facebook.com/vervoerregio" class="button">
+        <a href="https://www.instagram.com/vervoerregio/" class="button">
           <div class="icon">
             <i class="fab fa-instagram"></i>
           </div>
           <span>Instagram</span>
         </a>
 
-        <a href="#" class="button">
+        <a href="https://www.linkedin.com/company/vervoerregio-amsterdam/?originalSubdomain=nl" class="button">
           <div class="icon">
             <i class="fab fa-linkedin"></i>
           </div>
@@ -119,7 +134,7 @@
 
     <section class="header-style-content-3">
       <section class="header-style-title">
-        <h1>Afbeeldingen</h1>
+        <h1>Media</h1>
       </section>
     </section>
   </div>
@@ -129,293 +144,208 @@
       <div class="afbeelding-content">
         <section class="title-afbeeldingen">
 
-          <p>
-            Content van een website dat niet uit tekst bestaat, zoals foto’s, icoontjes en andere afbeeldingen, kan
-            toegankelijk worden gemaakt door deze ook als tekst beschikbaar te maken. Tekst kan namelijk door
-            hulptechnologieën op verschillende manieren worden gepresenteerd. Voorleessoftware kan een tekst omzetten in
-            spraak (auditief) en een brailleleesregel kan het vertalen naar braille (tactiel). Zo worden afbeelding ook
-            toegankelijk voor bezoekers die de afbeelding niet kunnen waarnemen.
+          <p>Alle mediabestanden moeten een korte tekstuele introductie hebben, ook als er volledige alternatieven zoals
+            een transcript of audiodesciptie aanwezig zijn. Zo’n korte introductie moet de inhoud van het mediabestand
+            globaal beschrijven. Met deze informatie kunnen bezoekers zelf beslissen wat ze met het mediabestand willen
+            doen. Dit is vooral handig voor bezoekers die de content niet gemakkelijk kunnen scannen, zoals bezoekers
+            die gebruik maken van schermlezers.
             <br><br>
-            De invulling van zo’n tekstalternatief is afhankelijk van de context van de afbeelding en kan per situatie
-            zelfs verschillen voor dezelfde afbeelding.
+            Een korte tekstuele introductie kan worden gegeven met een beschrijvende kop, een beschrijvende titel of
+            eventueel een beschrijvend label.
+          </p>
+          <br><br>
+
+          <ul>
+            <li>Geluidsfragmenten (geluid zonder beeld)
+            </li>
+            <li>Bewegende beelden (beeld zonder geluid)
+            </li>
+            <li>Filmpjes (beeld met geluid)
+            </li>
+          </ul>
+          <br><br>
+
+          <p>Soms worden geluidsfragmenten of filmpjes gebruikt als een alternatief voor een tekst. Als alle informatie
+            die te zien of te horen is ookk in de tekst staat, dan spreek je van een media-alternatief. Met een
+            gelijkwaardig media-alternatief hoeft een mediabestand niet te voldoen aan de bijbehorende eisen zoals
+            ondertitels, transcript of audiodescriptie.
+            <br><br>
+            In Nederland geldt een uitzondering voor media die vóór 23 september 2020 zijn gepubliceerd. Ook live media
+            hoeft niet direct toegankelijk te zijn. Als het na de uitzending online blijft staan of ergens opnieuw wordt
+            gepubliceerd, dan moet het wel toegankelijk worden gemaakt.
           </p>
         </section>
 
         <div class="details-box-shadow">
 
+
           <details>
             <summary>
               <i class="fa-solid fa-caret-down"></i>
-              <h3>Zorg dat afbeeldingen in de code een tekstalternatief kunnen krijgen</h3>
+              <h3>Geef media een kort tekstalternatief</h3>
               <label><input type="checkbox">
                 <i class="fa-solid fa-check"></i>
               </label>
             </summary>
 
             <section class="detail-list">
-              <p>Alle afbeeldingen moeten een tekstalternatief hebben. Een tekstalternatief kan op verschillende
-                manieren worden toegevoegd:</p>
-              <h4>Tekstalternatief voor een <code>&lt;img&gt;</code>-element</h4>
-              <p>Bij een <code>&lt;img&gt;</code>-element wordt een tekstalternatief gegeven met behulp van het
-                <code>&lt;alt&gt;</code>-attribuut.
+
+              <p>Alle mediabestanden moeten een korte tekstuele introductie hebben, ook als er volledige alternatieven
+                zoals een transcript of audiodesciptie aanwezig zijn. Zo’n korte introductie moet de inhoud van het
+                mediabestand globaal beschrijven. Met deze informatie kunnen bezoekers zelf beslissen wat ze met het
+                mediabestand willen doen. Dit is vooral handig voor bezoekers die de content niet gemakkelijk kunnen
+                scannen, zoals bezoekers die gebruik maken van schermlezers.
+                <br><br>
+                Een korte tekstuele introductie kan worden gegeven met een beschrijvende kop, een beschrijvende titel of
+                eventueel een beschrijvend label.
               </p>
-              <p>In de code ziet dat er zo uit:</p>
-              <script type="text/plain"
-                class="language-html"><img decoding="async" src="hond.jpg" alt="Hond speelt met een bal"></script>
+            </section>
 
-              <h4>Tekstalternatief voor een <code>&lt;svg&gt;</code>-element</h4>
-              <p>Bij een <code>&lt;svg&gt;</code>-element wordt een tekstalternatief gegeven met behulp van het
-                <code>&lt;title&gt;</code>-element in de svg. Gebruik ook aria-attribuut <code>&lt;role="img"&gt;</code>
-                om ervoor te zorgen dat zo veel mogelijk
-                ondersteunende technologieën het <code>&lt;svg&gt;</code>-element herkennen als een afbeelding.
+          </details>
+
+          <details>
+            <summary>
+              <i class="fa-solid fa-caret-down"></i>
+              <h3>Plaats een transcript bij geluidsfragmenten en bewegende beelden</h3>
+              <label><input type="checkbox">
+                <i class="fa-solid fa-check"></i>
+              </label>
+            </summary>
+
+            <section class="detail-list">
+
+              <p>Alle geluidsfragmenten en bewegende beelden moeten een transcript hebben. Ook voor filmpjes kan een
+                transcript een waardevolle toevoeging zijn. Een transcript is een uitgeschreven tekst waarin alles wordt
+                beschreven dat te zien, te horen en te doen is. Bijvoorbeeld alle gesproken tekst, maar ook de
+                belangrijke beelden en geluiden. Eventuele interactieve elementen, zoals een link, moeten ook worden
+                opgenomen in een transcript.
+                <br><br>
+                Een goed transcript:
+
               </p>
-              <p>In de code ziet dat er zo uit:</p>
-              <script type="text/plain" class="language-html"><svg role="img">
-                  <title>Hond speelt met een bal</title>
-                  ...
-                </svg></script>
+              <br><br>
 
-              <h4>Tekstalternatief voor afbeeldingen die is geplaatst met CSS</h4>
-              <p>Aan een afbeelding die geplaatst is met CSS kan een tekstalternatief worden gegeven met een
-                <code>&lt;aria-label.&gt;</code>
+              <ul>
+                <li>bevat alle gesproken tekst.</li>
+                <li>beschrijft alle belangrijke beelden.</li>
+                <li>beschrijft alle belangrijke geluiden.</li>
+                <li>bevat alle links.</li>
+                <li>beschrijft wie er spreekt als dit belangrijk is.
+                </li>
+                <li>benadrukt het volume van de spreker als dit belangrijk is.
+                </li>
+              </ul>
+              <br><br>
+
+
+
+              <p>Een transcript moet voor alle bezoekers gemakkelijk te bereiken zijn. Plaats een transcript, of een
+                link naar het transcript, altijd direct onder de code van het mediabestand.
+                <br><br>
+                Aan geluidsfragmenten moet altijd een transcript worden toegevoegd. Aan bewegende beelden moet alleen
+                een transcript worden toegevoegd als er geen audiodescriptie aanwezig is. Voor filmpjes geldt dat dit
+                alleen verplicht is als er interactieve elementen in het filmpje aanwezig zijn.
               </p>
-              <p>In de code ziet dat er zo uit:</p>
-              <script type="text/plain"
-                class="language-html"><div id=”logo” aria-label=”Hond speelt met een bal”></div></script>
-
-              <h4>Invulling van het Tekstalternatief</h4>
-              <p>De invulling van een tekstalternatief wordt bepaald door de functie die een afbeelding heeft. In veel
-                gevallen draagt een afbeelding informatie over. Beschrijf dan in het tekstalternatief wat er op de
-                afbeelding te zien is. Bij een afbeelding die ook een link is, gaat het juist om het beschrijven waar de
-                link naar toe verwijst. Als een afbeelding geen informatie aan de pagina toevoegt, dan is het beter om
-                het helemaal geen tekstalternatief te geven zodat het kan worden genegeerd door hulptechnologieën.</p>
-
-
-              <a href="#"><button class="detail-button">Bekijk een voorbeeld website</button></a>
             </section>
+
+
+
           </details>
 
           <details>
             <summary>
               <i class="fa-solid fa-caret-down"></i>
-              <h3>Geef afbeeldingen die informatie overdragen een beschrijvend tekstalternatief</h3>
+              <h3>Voeg ondertitels toe aan filmpjes</h3>
               <label><input type="checkbox">
                 <i class="fa-solid fa-check"></i>
               </label>
             </summary>
 
             <section class="detail-list">
-              <p>Afbeeldingen die informatie overbrengen zijn noodzakelijk voor het begrijpen van de tekst. De
-                afbeeldingen voegen extra informatie toe aan de pagina. Deze afbeeldingen moeten een tekstalternatief
-                hebben dat nauwkeurig beschrijft wat er op de afbeelding te zien is. De invulling is afhankelijk van de
-                context en kan per situatie afwijkend zijn voor dezelfde afbeelding.</p>
-              <p>In een CMS kan een tekstalternatief doorgaans worden toegevoegd in de mediatheek.</p>
-              <p>In de code ziet dat er zo uit:</p>
-              <script type="text/plain"
-                class="language-html"><img decoding="async" src="poes.jpg" alt="Witte poes speelt met een rode bal"></script>
-              <p>Het tekstalternatief moet een goede vervanging kunnen zijn voor een afbeelding. Bedenk bij het
-                schrijven van het tekstalternatief altijd wat de bedoeling is van de afbeelding. Houd een
-                tekstalternatief altijd nuttig en beknopt.</p>
-            </section>
-          </details>
 
-          <details>
-            <summary>
-              <i class="fa-solid fa-caret-down"></i>
-              <h3>Geef complexe afbeeldingen een langere beschrijving</h3>
-              <label><input type="checkbox">
-                <i class="fa-solid fa-check"></i>
-              </label>
-            </summary>
+              <p>Alle filmpjes moeten ondertitels voor doven en slechthorenden hebben. In ondertitels voor doven en
+                slechthorenden moeten de gesproken tekst én de belangrijke geluiden worden overgenomen. Belangrijk
+                geluiden zijn bijvoorbeeld een deurbel of een explosie. Ook muziek kan belangrijk zijn om het filmpje
+                of de sfeer in het filmpje te kunnen begrijpen.
+                <br><br>
+                Goede ondertitels:
+              </p>
+              <br><br>
 
-            <section class="detail-list">
-              <img class="img-detail-list" src="assets/1.1.1-Niet-tekstuele-content.png" alt="test">
-              <p>Alle niet-tekstuele content die aan de gebruiker wordt gepresenteerd, heeft een tekstalternatief dat
-                een
-                gelijkwaardig doel dient, behalve voor de hierna vermelde situaties.</p>
               <ul>
-                <li>Bedieningselementen, invoer: Als niet-tekstuele content een bedieningselement is of gebruikersinvoer
-                  accepteert, dan heeft deze een naam die het doel ervan beschrijft. (We verwijzen naar succescriterium
-                  4.1.2 voor aanvullende eisen ten aanzien van bedieningselementen en content die gebruikersinvoer
-                  accepteren.)</li>
-                <li>Op tijd gebaseerde media: Als niet-tekstuele content op tijd gebaseerde media is, dan leveren
-                  tekstalternatieven ten minste een beschrijving van de niet-tekstuele content. (We verwijzen naar
-                  Richtlijn
-                  1.2 voor aanvullende eisen ten aanzien van media.)</li>
-                <li>Test: Als niet-tekstuele content een test of oefening is die, als ze door middel van tekst
-                  gepresenteerd
-                  wordt onjuist zou zijn, dan leveren tekstalternatieven ten minste een beschrijving van de
-                  niet-tekstuele
-                  content.</li>
-                <li>Zintuiglijk: Als niet-tekstuele content primair is bedoeld om een specifieke zintuiglijke ervaring
-                  te
-                  creëren, dan leveren tekstalternatieven ten minste een beschrijving van de niet-tekstuele content.
-                </li>
-                <li>CAPTCHA: Als het doel van niet-tekstuele content is om te bevestigen dat content wordt gebruikt door
-                  een
-                  persoon in plaats van een computer, dan worden tekstalternatieven geleverd die het doel van de
-                  niet-tekstuele content identificeren en beschrijven. En er worden alternatieve vormen van CAPTCHA
-                  aangeboden gebruikmakend van uitvoermodes voor verschillende soorten van zintuiglijke perceptie om
-                  tegemoet te komen aan verschillende functiebeperkingen.</li>
-                <li>Decoratie, opmaak, onzichtbaar: Als niet-tekstuele content puur decoratief is, slechts voor visuele
-                  opmaak wordt gebruikt, of niet aan gebruikers wordt gerepresenteerd, dan wordt het op zo’n manier
-                  geïmplementeerd dat het genegeerd kan worden door hulptechnologie.</li>
+                <li>bevatten alle gesproken tekst.</li>
+                <li>beschrijven alle belangrijke geluiden.</li>
+                <li>beschrijven wie er spreekt als dit niet direct duidelijk is.</li>
+                <li>benadrukken het volume van de spreker als dit belangrijk is.</li>
+                <li>zijn goed zichtbaar.</li>
+                <li>lopen zo veel mogelijk gelijk met het geluid.</li>
+                <li>bedekken geen andere informatie.</li>
               </ul>
-              <a href="#"><button class="detail-button">Bekijk een voorbeeld website</button></a>
-              <!--<a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html"><button
-              class="detail-button">Niet-tekstuele content begrijpen </button></a>
-          <a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=231%2C111#non-text-content"><button
-              class="detail-button">Hoe te voldoen aan Niet-tekstuele content </button></a>-->
+              <br><br>
+
+
+
+              <p>Het is niet erg als de gesproken tekst een heel klein beetje wordt versimpeld om de ondertitels niet te lang te maken.
+                <br><br>
+                Er zijn verschillende manieren om ondertitels toe te voegen: ingebakken in het filmpje (open captions) of toegevoegd als een apart ondertitelbestand bij het filmpje (closed captions)
+              </p>
             </section>
+
           </details>
 
           <details>
             <summary>
               <i class="fa-solid fa-caret-down"></i>
-              <h3>Geef afbeeldingen die ook een link zijn een tekstalternatief dat het doel van de link beschrijft</h3>
+              <h3>Voeg een audiodescriptie toe aan filmpjes</h3>
               <label><input type="checkbox">
                 <i class="fa-solid fa-check"></i>
               </label>
             </summary>
 
             <section class="detail-list">
-              <img class="img-detail-list" src="assets/1.1.1-Niet-tekstuele-content.png" alt="test">
-              <p>Alle niet-tekstuele content die aan de gebruiker wordt gepresenteerd, heeft een tekstalternatief dat
-                een
-                gelijkwaardig doel dient, behalve voor de hierna vermelde situaties.</p>
-              <ul>
-                <li>Bedieningselementen, invoer: Als niet-tekstuele content een bedieningselement is of gebruikersinvoer
-                  accepteert, dan heeft deze een naam die het doel ervan beschrijft. (We verwijzen naar succescriterium
-                  4.1.2 voor aanvullende eisen ten aanzien van bedieningselementen en content die gebruikersinvoer
-                  accepteren.)</li>
-                <li>Op tijd gebaseerde media: Als niet-tekstuele content op tijd gebaseerde media is, dan leveren
-                  tekstalternatieven ten minste een beschrijving van de niet-tekstuele content. (We verwijzen naar
-                  Richtlijn
-                  1.2 voor aanvullende eisen ten aanzien van media.)</li>
-                <li>Test: Als niet-tekstuele content een test of oefening is die, als ze door middel van tekst
-                  gepresenteerd
-                  wordt onjuist zou zijn, dan leveren tekstalternatieven ten minste een beschrijving van de
-                  niet-tekstuele
-                  content.</li>
-                <li>Zintuiglijk: Als niet-tekstuele content primair is bedoeld om een specifieke zintuiglijke ervaring
-                  te
-                  creëren, dan leveren tekstalternatieven ten minste een beschrijving van de niet-tekstuele content.
-                </li>
-                <li>CAPTCHA: Als het doel van niet-tekstuele content is om te bevestigen dat content wordt gebruikt door
-                  een
-                  persoon in plaats van een computer, dan worden tekstalternatieven geleverd die het doel van de
-                  niet-tekstuele content identificeren en beschrijven. En er worden alternatieve vormen van CAPTCHA
-                  aangeboden gebruikmakend van uitvoermodes voor verschillende soorten van zintuiglijke perceptie om
-                  tegemoet te komen aan verschillende functiebeperkingen.</li>
-                <li>Decoratie, opmaak, onzichtbaar: Als niet-tekstuele content puur decoratief is, slechts voor visuele
-                  opmaak wordt gebruikt, of niet aan gebruikers wordt gerepresenteerd, dan wordt het op zo’n manier
-                  geïmplementeerd dat het genegeerd kan worden door hulptechnologie.</li>
-              </ul>
-              <a href="#"><button class="detail-button">Bekijk een voorbeeld website</button></a>
-              <!--<a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html"><button
-              class="detail-button">Niet-tekstuele content begrijpen </button></a>
-          <a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=231%2C111#non-text-content"><button
-              class="detail-button">Hoe te voldoen aan Niet-tekstuele content </button></a>-->
+
+              <p>In filmpjes wordt soms niet alle zichtbare informatie óók met geluid overgedragen. Sommige dingen zijn
+                wel te zien, maar niet te horen. Deze visuele informatie moet met een audiodescriptie worden toegevoegd
+                aan het filmpje. In een audiodescriptie vertelt een voice-over over belangrijke zichtbare beelden die
+                niet zijn af te leiden uit dat wat te horen is in het filmpje. Dat kan bijvoorbeeld gaan om handelingen,
+                personen maar ook om tekst die alleen in het beeld te zien is. Dit gebeurt op de momenten dat er pauzes
+                zijn in het originele geluid van het filmpje. Zo kunnen bezoekers die blind of slechtziend zijn het
+                filmpje ook goed volgen.
+                <br><br>
+                Er zijn verschillende manieren om een audiodescriptie toe te voegen: toegevoegd in het geluid van het
+                filmpje of toegevoegd als alternatief audiospoor.
+              </p>
+              <br><br>
+
+              <p>Een audiodescriptie hoort zo veel mogelijk samen te vallen met de beschreven zichtbare informatie.
+                <br><br>
+                Voor filmpjes is een audiodescriptie niet altijd nodig. Als alle zichtbare informatie ook te horen is,
+                dan is het niet verplicht. Aan bewegende beelden moet alleen een audiodescriptie worden toegevoegd als
+                er geen transcript aanwezig is.
+              </p>
             </section>
           </details>
 
           <details>
             <summary>
               <i class="fa-solid fa-caret-down"></i>
-              <h3>Zorg dat decoratieve afbeeldingen door hulptechnologieën genegeerd kunnen worden</h3>
+              <h3>Zorg dat geluid dat automatisch begint te spelen uitgezet kan worden of binnen 3 seconden stopt</h3>
               <label><input type="checkbox">
                 <i class="fa-solid fa-check"></i>
               </label>
             </summary>
 
             <section class="detail-list">
-              <img class="img-detail-list" src="assets/1.1.1-Niet-tekstuele-content.png" alt="test">
-              <p>Alle niet-tekstuele content die aan de gebruiker wordt gepresenteerd, heeft een tekstalternatief dat
-                een
-                gelijkwaardig doel dient, behalve voor de hierna vermelde situaties.</p>
-              <ul>
-                <li>Bedieningselementen, invoer: Als niet-tekstuele content een bedieningselement is of gebruikersinvoer
-                  accepteert, dan heeft deze een naam die het doel ervan beschrijft. (We verwijzen naar succescriterium
-                  4.1.2 voor aanvullende eisen ten aanzien van bedieningselementen en content die gebruikersinvoer
-                  accepteren.)</li>
-                <li>Op tijd gebaseerde media: Als niet-tekstuele content op tijd gebaseerde media is, dan leveren
-                  tekstalternatieven ten minste een beschrijving van de niet-tekstuele content. (We verwijzen naar
-                  Richtlijn
-                  1.2 voor aanvullende eisen ten aanzien van media.)</li>
-                <li>Test: Als niet-tekstuele content een test of oefening is die, als ze door middel van tekst
-                  gepresenteerd
-                  wordt onjuist zou zijn, dan leveren tekstalternatieven ten minste een beschrijving van de
-                  niet-tekstuele
-                  content.</li>
-                <li>Zintuiglijk: Als niet-tekstuele content primair is bedoeld om een specifieke zintuiglijke ervaring
-                  te
-                  creëren, dan leveren tekstalternatieven ten minste een beschrijving van de niet-tekstuele content.
-                </li>
-                <li>CAPTCHA: Als het doel van niet-tekstuele content is om te bevestigen dat content wordt gebruikt door
-                  een
-                  persoon in plaats van een computer, dan worden tekstalternatieven geleverd die het doel van de
-                  niet-tekstuele content identificeren en beschrijven. En er worden alternatieve vormen van CAPTCHA
-                  aangeboden gebruikmakend van uitvoermodes voor verschillende soorten van zintuiglijke perceptie om
-                  tegemoet te komen aan verschillende functiebeperkingen.</li>
-                <li>Decoratie, opmaak, onzichtbaar: Als niet-tekstuele content puur decoratief is, slechts voor visuele
-                  opmaak wordt gebruikt, of niet aan gebruikers wordt gerepresenteerd, dan wordt het op zo’n manier
-                  geïmplementeerd dat het genegeerd kan worden door hulptechnologie.</li>
-              </ul>
-              <a href="#"><button class="detail-button">Bekijk een voorbeeld website</button></a>
-              <!--<a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html"><button
-              class="detail-button">Niet-tekstuele content begrijpen </button></a>
-          <a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=231%2C111#non-text-content"><button
-              class="detail-button">Hoe te voldoen aan Niet-tekstuele content </button></a>-->
-            </section>
-          </details>
-
-          <details>
-            <summary>
-              <i class="fa-solid fa-caret-down"></i>
-              <h3>Gebruik geen afbeeldingen van tekst</h3>
-              <label><input type="checkbox">
-                <i class="fa-solid fa-check"></i>
-              </label>
-            </summary>
-
-            <section class="detail-list">
-              <img class="img-detail-list" src="assets/1.1.1-Niet-tekstuele-content.png" alt="test">
-              <p>Alle niet-tekstuele content die aan de gebruiker wordt gepresenteerd, heeft een tekstalternatief dat
-                een
-                gelijkwaardig doel dient, behalve voor de hierna vermelde situaties.</p>
-              <ul>
-                <li>Bedieningselementen, invoer: Als niet-tekstuele content een bedieningselement is of gebruikersinvoer
-                  accepteert, dan heeft deze een naam die het doel ervan beschrijft. (We verwijzen naar succescriterium
-                  4.1.2 voor aanvullende eisen ten aanzien van bedieningselementen en content die gebruikersinvoer
-                  accepteren.)</li>
-                <li>Op tijd gebaseerde media: Als niet-tekstuele content op tijd gebaseerde media is, dan leveren
-                  tekstalternatieven ten minste een beschrijving van de niet-tekstuele content. (We verwijzen naar
-                  Richtlijn
-                  1.2 voor aanvullende eisen ten aanzien van media.)</li>
-                <li>Test: Als niet-tekstuele content een test of oefening is die, als ze door middel van tekst
-                  gepresenteerd
-                  wordt onjuist zou zijn, dan leveren tekstalternatieven ten minste een beschrijving van de
-                  niet-tekstuele
-                  content.</li>
-                <li>Zintuiglijk: Als niet-tekstuele content primair is bedoeld om een specifieke zintuiglijke ervaring
-                  te
-                  creëren, dan leveren tekstalternatieven ten minste een beschrijving van de niet-tekstuele content.
-                </li>
-                <li>CAPTCHA: Als het doel van niet-tekstuele content is om te bevestigen dat content wordt gebruikt door
-                  een
-                  persoon in plaats van een computer, dan worden tekstalternatieven geleverd die het doel van de
-                  niet-tekstuele content identificeren en beschrijven. En er worden alternatieve vormen van CAPTCHA
-                  aangeboden gebruikmakend van uitvoermodes voor verschillende soorten van zintuiglijke perceptie om
-                  tegemoet te komen aan verschillende functiebeperkingen.</li>
-                <li>Decoratie, opmaak, onzichtbaar: Als niet-tekstuele content puur decoratief is, slechts voor visuele
-                  opmaak wordt gebruikt, of niet aan gebruikers wordt gerepresenteerd, dan wordt het op zo’n manier
-                  geïmplementeerd dat het genegeerd kan worden door hulptechnologie.</li>
-              </ul>
-              <a href="#"><button class="detail-button">Bekijk een voorbeeld website</button></a>
-              <!--<a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html"><button
-              class="detail-button">Niet-tekstuele content begrijpen </button></a>
-          <a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=231%2C111#non-text-content"><button
-              class="detail-button">Hoe te voldoen aan Niet-tekstuele content </button></a>-->
+              <p>Laat geluid niet automatisch spelen na het laden van een pagina, of zorg er in elk geval voor dat het
+                geluid niet langer dan 3 seconden duurt. Voor bezoekers die gebruik maken van voorleessoftware kan het
+                storend zijn als geluid automatisch begint te spelen. Zij kunnen de stem van voorleessoftware dan niet
+                meer goed te horen. Ook voor bezoekers die moeite hebben met concentratie kunnen er door worden
+                afgeleid.
+                <br><br>
+                Geluid dat toch automatisch begint te spelen, moet eenvoudig kunnen worden gepauzeerd, gestopt of
+                zachter worden gezet. Zorg dan voor een pauze- of stopknop en een volumeregelaar bij het geluid. Voorzie
+                eventueel ook een skiplink zodat deze bediening gemakkelijk te bereiken is.
+              </p>
             </section>
           </details>
 
@@ -429,43 +359,16 @@
             </summary>
 
             <section class="detail-list">
-              <img class="img-detail-list" src="assets/1.1.1-Niet-tekstuele-content.png" alt="test">
-              <p>Alle niet-tekstuele content die aan de gebruiker wordt gepresenteerd, heeft een tekstalternatief dat
-                een
-                gelijkwaardig doel dient, behalve voor de hierna vermelde situaties.</p>
-              <ul>
-                <li>Bedieningselementen, invoer: Als niet-tekstuele content een bedieningselement is of gebruikersinvoer
-                  accepteert, dan heeft deze een naam die het doel ervan beschrijft. (We verwijzen naar succescriterium
-                  4.1.2 voor aanvullende eisen ten aanzien van bedieningselementen en content die gebruikersinvoer
-                  accepteren.)</li>
-                <li>Op tijd gebaseerde media: Als niet-tekstuele content op tijd gebaseerde media is, dan leveren
-                  tekstalternatieven ten minste een beschrijving van de niet-tekstuele content. (We verwijzen naar
-                  Richtlijn
-                  1.2 voor aanvullende eisen ten aanzien van media.)</li>
-                <li>Test: Als niet-tekstuele content een test of oefening is die, als ze door middel van tekst
-                  gepresenteerd
-                  wordt onjuist zou zijn, dan leveren tekstalternatieven ten minste een beschrijving van de
-                  niet-tekstuele
-                  content.</li>
-                <li>Zintuiglijk: Als niet-tekstuele content primair is bedoeld om een specifieke zintuiglijke ervaring
-                  te
-                  creëren, dan leveren tekstalternatieven ten minste een beschrijving van de niet-tekstuele content.
-                </li>
-                <li>CAPTCHA: Als het doel van niet-tekstuele content is om te bevestigen dat content wordt gebruikt door
-                  een
-                  persoon in plaats van een computer, dan worden tekstalternatieven geleverd die het doel van de
-                  niet-tekstuele content identificeren en beschrijven. En er worden alternatieve vormen van CAPTCHA
-                  aangeboden gebruikmakend van uitvoermodes voor verschillende soorten van zintuiglijke perceptie om
-                  tegemoet te komen aan verschillende functiebeperkingen.</li>
-                <li>Decoratie, opmaak, onzichtbaar: Als niet-tekstuele content puur decoratief is, slechts voor visuele
-                  opmaak wordt gebruikt, of niet aan gebruikers wordt gerepresenteerd, dan wordt het op zo’n manier
-                  geïmplementeerd dat het genegeerd kan worden door hulptechnologie.</li>
-              </ul>
-              <a href="#"><button class="detail-button">Bekijk een voorbeeld website</button></a>
-              <!--<a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html"><button
-              class="detail-button">Niet-tekstuele content begrijpen </button></a>
-          <a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=231%2C111#non-text-content"><button
-              class="detail-button">Hoe te voldoen aan Niet-tekstuele content </button></a>-->
+              <p>Zorg dat alle bewegende, scrollende of knipperende content dat automatisch start én langer dan 5
+                seconden duurt kan worden gepauzeerd, gestopt of worden uitgezet. Onder bewegende, scrollende of
+                knipperende content vallen onder andere carrousels, animaties op de pagina, bewegende advertenties, enz.
+                Bezoekers met een cognitieve beperking kunnen er door worden afgeleid. Ook voor bezoekers die gebruik
+                maken van een schermlezer kan dit storend zijn.
+                <br><br>
+                Deze regels gelden ook alle automatisch verversende content, maar hiervoor geldt ook de frequentie van
+                updates mag worden aangepast.
+              </p>
+
             </section>
           </details>
 
@@ -479,45 +382,13 @@
             </summary>
 
             <section class="detail-list">
-              <img class="img-detail-list" src="assets/1.1.1-Niet-tekstuele-content.png" alt="test">
-              <p>Alle niet-tekstuele content die aan de gebruiker wordt gepresenteerd, heeft een tekstalternatief dat
-                een
-                gelijkwaardig doel dient, behalve voor de hierna vermelde situaties.</p>
-              <ul>
-                <li>Bedieningselementen, invoer: Als niet-tekstuele content een bedieningselement is of gebruikersinvoer
-                  accepteert, dan heeft deze een naam die het doel ervan beschrijft. (We verwijzen naar succescriterium
-                  4.1.2 voor aanvullende eisen ten aanzien van bedieningselementen en content die gebruikersinvoer
-                  accepteren.)</li>
-                <li>Op tijd gebaseerde media: Als niet-tekstuele content op tijd gebaseerde media is, dan leveren
-                  tekstalternatieven ten minste een beschrijving van de niet-tekstuele content. (We verwijzen naar
-                  Richtlijn
-                  1.2 voor aanvullende eisen ten aanzien van media.)</li>
-                <li>Test: Als niet-tekstuele content een test of oefening is die, als ze door middel van tekst
-                  gepresenteerd
-                  wordt onjuist zou zijn, dan leveren tekstalternatieven ten minste een beschrijving van de
-                  niet-tekstuele
-                  content.</li>
-                <li>Zintuiglijk: Als niet-tekstuele content primair is bedoeld om een specifieke zintuiglijke ervaring
-                  te
-                  creëren, dan leveren tekstalternatieven ten minste een beschrijving van de niet-tekstuele content.
-                </li>
-                <li>CAPTCHA: Als het doel van niet-tekstuele content is om te bevestigen dat content wordt gebruikt door
-                  een
-                  persoon in plaats van een computer, dan worden tekstalternatieven geleverd die het doel van de
-                  niet-tekstuele content identificeren en beschrijven. En er worden alternatieve vormen van CAPTCHA
-                  aangeboden gebruikmakend van uitvoermodes voor verschillende soorten van zintuiglijke perceptie om
-                  tegemoet te komen aan verschillende functiebeperkingen.</li>
-                <li>Decoratie, opmaak, onzichtbaar: Als niet-tekstuele content puur decoratief is, slechts voor visuele
-                  opmaak wordt gebruikt, of niet aan gebruikers wordt gerepresenteerd, dan wordt het op zo’n manier
-                  geïmplementeerd dat het genegeerd kan worden door hulptechnologie.</li>
-              </ul>
-              <a href="#"><button class="detail-button">Bekijk een voorbeeld website</button></a>
-              <!--<a href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html"><button
-              class="detail-button">Niet-tekstuele content begrijpen </button></a>
-          <a href="https://www.w3.org/WAI/WCAG21/quickref/?showtechniques=231%2C111#non-text-content"><button
-              class="detail-button">Hoe te voldoen aan Niet-tekstuele content </button></a>-->
+              <p>Gebruik geen flitsende content. Laat onderdelen in elk geval niet meer dan 3 keer per seconde flitsen.
+                Bezoekers met bepaalde vormen van epilepsie kunnen een aanval krijgen als ze kijken naar knipperende of
+                flitsende afbeeldingen of media.</p>
             </section>
           </details>
+
+          
         </div>
       </div>
 

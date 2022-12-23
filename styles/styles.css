@@ -110,7 +110,7 @@ h1 {
   line-height: 1;
 }
 
-strong {
+h1 strong {
   /* font-size: 2.5rem; */
   font-size: clamp(2.5rem, 8vw, 6rem);
   font-weight: 700;
@@ -135,15 +135,26 @@ h4 {
 }
 
 p {
-  font-size: .8rem;
+  font-size: 1rem;
+  color: var(--c-color-dark);
+}
+
+p strong {
+  font-size: 1.125rem;
+  font-weight: 600;
   color: var(--c-color-dark);
 }
 
 @media screen and (min-width: 785px) {
   p{
     font-size: 1.125rem;
+  }
 
-  }  
+  p strong {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--c-color-dark);
+  }
 }
 
 /* Header */
@@ -651,7 +662,6 @@ dialog button {
   max-width: 800px;
   min-height: 200px;
   height: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -662,6 +672,11 @@ dialog button {
   flex-wrap: wrap;
   margin: 0 0rem;
   gap: .5rem;
+}
+
+.header-style-title p strong{
+  color: var(--c-color-light-solid);
+
 }
 
 .header-style-image {
@@ -1027,6 +1042,7 @@ main {
 
 .content-richtlinen {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   gap: var(--large-gap);
   padding-top: 5rem;
@@ -1034,12 +1050,34 @@ main {
 
 .progresion {
   width: 100%;
-  max-width: 400px;
+}
+
+@media screen and (min-width: 1200px) {
+  .progresion {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .content-richtlinen {
+    flex-direction: row;
+
+  }
 }
 
 .title {
   padding: 5rem 0 2rem 0;
 }
+
+.title-content{
+display: flex;
+flex-direction: column;
+gap: 2rem;
+margin-bottom: 5rem;
+}
+
+.title-content div{
+width: 100%;
+  }
 
 .informatie {
   display: flex;
@@ -1167,12 +1205,35 @@ main {
   color: var(--c-primary);
 }
 
+main ul,
+main ol{
+  font-size: 1rem;
+  color: var(--c-color-dark);
+  list-style-position: inside;
+}
+
+
+
 @media screen and (min-width: 785px) {
   main{
     margin: 0rem 10%;
 
   }
+
+  .title-content{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5rem;
+    }
+
+    main ul,
+    main ol{
+      font-size: 1.125rem;
+    }
+
 }
+
+
 
 @media screen and (min-width: 450px) {
 
@@ -1226,7 +1287,7 @@ main {
 }
 
 details h3 {
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--c-color-dark);
 }
@@ -1240,8 +1301,8 @@ details[open] h3 {
 }
 
 details h4 {
-  font-size: 1.3rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--c-color-dark);
 }
 
@@ -1251,6 +1312,10 @@ details:hover h4 {
 
 details[open] h4 {
   color: var(--c-color-dark);
+}
+
+details::marker{
+  display: none;
 }
 
 .content-richtlinen details {
@@ -1264,14 +1329,14 @@ details[open] h4 {
 details > summary {
   background: none;
   color: var(--c-color-light);
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
 }
 
 details[open] > summary {
   background-color: var(--c-primary);
   color: var(--c-color-light-solid);
   border-radius: var(--b-radius-medium) var(--b-radius-medium) 0 0;
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   box-shadow: var(--c-box-shadow-dark);
 }
 
@@ -1281,16 +1346,21 @@ details:hover > summary {
 
 .content-richtlinen details summary i.fa-caret-down {
   color: var(--c-primary);
+  display: none;
 }
 
 .content-richtlinen details:hover summary i.fa-caret-down {
   color: var(--c-color-light-solid);
+  display: none;
+
 }
 
 .content-richtlinen details[open] summary i.fa-caret-down {
   transform: rotate(-180deg);
   transition-duration: 0.5s;
   color: var(--c-color-light-solid);
+  display: none;
+
 }
 
 .content-richtlinen summary i.fa-caret-down {
@@ -1302,7 +1372,7 @@ details:hover > summary {
 
 .content-richtlinen summary {
   display: flex;
-  gap: var(--medium-gap);
+  gap: 1.5rem;
   align-items: center;
   cursor: pointer;
 }
@@ -1345,6 +1415,39 @@ details:hover > summary {
   box-shadow: inset 0 0 0 20px var(--c-primary);
 }
 
+@media screen and (min-width: 783px) {
+
+  details h3,
+  details h4 {
+    font-size: 1.3rem;
+
+  }
+
+  .content-richtlinen details summary i.fa-caret-down {
+    color: var(--c-primary);
+    display: block;
+  }
+  
+  .content-richtlinen details:hover summary i.fa-caret-down {
+    color: var(--c-color-light-solid);
+    display: block;
+
+  }
+  
+  .content-richtlinen details[open] summary i.fa-caret-down {
+    transform: rotate(-180deg);
+    transition-duration: 0.5s;
+    color: var(--c-color-light-solid);
+    display: block;
+
+  }
+
+}
+
+@media screen and (min-width: 1000px) {
+
+}
+
 /* details content */
 .detail-list {
   padding: 2rem 4.7rem;
@@ -1368,6 +1471,7 @@ details:hover > summary {
   border: 2px solid #d3d3d3;
   background: #f6f8f9;
   border-radius: var(--b-radius-small);
+  color: var(--c-color-dark-solid);
 }
 
 .detail-button {
