@@ -1626,13 +1626,13 @@ textarea {
   font-weight: 600;
   text-align: left;
   border: 4px solid var(--c-color-light-solid);
-  transition: 0.5s;
+  transition: all 0.3s ease-in-out;
 }
 
 .footer-bericht input[type="submit"]:hover {
   border: 4px solid var(--c-color-light-solid);
   color: var(--c-color-light-solid);
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .sub-footer {
@@ -1644,7 +1644,7 @@ textarea {
 
 .sub-footer p {
   padding-bottom: 1rem;
-  color: var(--c-color-light-solid);
+  color: var(--c-p);
   padding: 0.5rem 6px;
 }
 
